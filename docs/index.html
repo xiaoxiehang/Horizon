@@ -1,279 +1,96 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Horizon Daily</title>
   <style>
-    :root {
-      --color-primary: #FF385C;
-      --color-primary-light: #FFE4E8;
-      --color-text: #222222;
-      --color-text-secondary: #717171;
-      --color-bg: #F7F7F7;
-      --color-card: #FFFFFF;
-      --color-border: #EBEBEB;
-      --color-tag-bg: #F0F0F0;
-      --radius: 12px;
-      --radius-sm: 8px;
-      --shadow: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.04);
-      --shadow-hover: 0 6px 20px rgba(0,0,0,0.1);
-      --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-      --max-width: 720px;
-    }
-
     * { margin: 0; padding: 0; box-sizing: border-box; }
-
     body {
-      font-family: var(--font);
-      background: var(--color-bg);
-      color: var(--color-text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: #fafafa;
+      color: #1a1a1a;
       line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    .container {
-      max-width: var(--max-width);
+      padding: 20px;
+      max-width: 900px;
       margin: 0 auto;
-      padding: 0 20px;
     }
-
-    /* Header */
-    header {
-      background: var(--color-card);
-      border-bottom: 1px solid var(--color-border);
-      padding: 24px 0;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      backdrop-filter: blur(10px);
-      background: rgba(255,255,255,0.95);
-    }
-
-    .header-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .logo-icon {
-      width: 32px;
-      height: 32px;
-      background: var(--color-primary);
-      border-radius: var(--radius-sm);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-size: 18px;
-    }
-
-    .logo h1 {
-      font-size: 20px;
-      font-weight: 600;
-      letter-spacing: -0.3px;
-    }
-
-    .date-badge {
-      font-size: 13px;
-      color: var(--color-text-secondary);
-      background: var(--color-bg);
-      padding: 6px 14px;
-      border-radius: 20px;
-      font-weight: 500;
-    }
-
-    /* Stats */
-    .stats {
-      display: flex;
-      gap: 12px;
-      margin: 24px 0 16px;
-    }
-
-    .stat-item {
-      background: var(--color-card);
-      border: 1px solid var(--color-border);
-      border-radius: var(--radius);
-      padding: 14px 20px;
-      flex: 1;
-      text-align: center;
-    }
-
-    .stat-number {
-      font-size: 24px;
-      font-weight: 700;
-      color: var(--color-primary);
-    }
-
-    .stat-label {
-      font-size: 12px;
-      color: var(--color-text-secondary);
-      margin-top: 2px;
-    }
-
-    /* Cards */
     .news-list {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      padding-bottom: 60px;
+      display: grid;
+      gap: 16px;
+      margin-bottom: 60px;
     }
-
-    .news-card {
-      background: var(--color-card);
-      border: 1px solid var(--color-border);
-      border-radius: var(--radius);
+    .news-item {
+      background: white;
       padding: 20px 24px;
-      transition: box-shadow 0.2s ease, transform 0.2s ease;
-      cursor: pointer;
-      text-decoration: none;
-      color: inherit;
-      display: block;
+      border-radius: 10px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+      transition: transform 0.15s, box-shadow 0.15s;
     }
-
-    .news-card:hover {
-      box-shadow: var(--shadow-hover);
-      transform: translateY(-1px);
+    .news-item:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     }
-
-    .card-header {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: 12px;
+    .news-item h3 {
+      font-size: 1.05em;
+      font-weight: 500;
+      line-height: 1.5;
       margin-bottom: 10px;
     }
-
-    .card-title {
-      font-size: 16px;
-      font-weight: 600;
-      line-height: 1.4;
-      letter-spacing: -0.2px;
+    .news-item h3 a {
+      color: #1a1a1a;
+      text-decoration: none;
     }
-
-    .score-badge {
-      font-size: 12px;
-      font-weight: 700;
-      color: var(--color-primary);
-      background: var(--color-primary-light);
-      padding: 4px 10px;
-      border-radius: 20px;
-      white-space: nowrap;
-      flex-shrink: 0;
+    .news-item h3 a:hover {
+      color: #0070f3;
     }
-
-    .card-summary {
-      font-size: 14px;
-      color: var(--color-text-secondary);
-      line-height: 1.6;
-      margin-bottom: 12px;
-    }
-
-    .card-meta {
+    .meta {
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 8px;
+      gap: 12px;
+      font-size: 0.8em;
+      color: #888;
+      margin-bottom: 10px;
     }
-
-    .tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-    }
-
-    .tag {
-      font-size: 11px;
+    .meta .score {
+      color: #0070f3;
       font-weight: 500;
-      color: var(--color-text-secondary);
-      background: var(--color-tag-bg);
-      padding: 3px 10px;
-      border-radius: 12px;
     }
-
-    .source {
-      font-size: 12px;
-      color: var(--color-text-secondary);
-      white-space: nowrap;
+    .meta .source {
+      color: #666;
     }
-
-    .source-dot {
-      display: inline-block;
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: var(--color-primary);
-      margin-right: 5px;
+    .content {
+      color: #555;
+      font-size: 0.9em;
+      line-height: 1.7;
     }
-
-    /* Footer */
     footer {
       text-align: center;
-      padding: 32px 0;
-      color: var(--color-text-secondary);
-      font-size: 13px;
-      border-top: 1px solid var(--color-border);
-      background: var(--color-card);
+      padding: 30px 0;
+      border-top: 1px solid #eee;
+      color: #999;
+      font-size: 0.8em;
     }
-
+    footer .info {
+      margin-bottom: 8px;
+    }
     footer a {
-      color: var(--color-primary);
+      color: #666;
       text-decoration: none;
-      font-weight: 500;
     }
-
-    /* Responsive */
-    @media (max-width: 480px) {
-      .stats { flex-direction: column; }
-      .card-header { flex-direction: column; gap: 8px; }
-      .news-card { padding: 16px 18px; }
-      .header-inner { flex-direction: column; gap: 12px; align-items: flex-start; }
+    footer a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
-
-<header>
-  <div class="container">
-    <div class="header-inner">
-      <div class="logo">
-        <div class="logo-icon">🌅</div>
-        <h1>Horizon Daily</h1>
-      </div>
-      <span class="date-badge" id="date-badge">{{DATE}}</span>
-    </div>
-  </div>
-</header>
-
-<main class="container">
-  <div class="stats">
-    <div class="stat-item">
-      <div class="stat-number" id="stat-total">{{TOTAL_ITEMS}}</div>
-      <div class="stat-label">Items Scanned</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-number" id="stat-selected">{{SELECTED_ITEMS}}</div>
-      <div class="stat-label">Key Stories</div>
-    </div>
+  <div class="news-list">
+    {{NEWS_ITEMS}}
   </div>
 
-  <div class="news-list" id="news-list">
-    <!-- NEWS_ITEMS_PLACEHOLDER -->
-  </div>
-</main>
-
-<footer>
-  <div class="container">
-    Powered by <a href="https://github.com/xiaoxiehang/Horizon">Horizon</a> · AI-Driven News Aggregation · Updated Daily
-  </div>
-</footer>
-
+  <footer>
+    <div class="info">{{DATE}} · 精选 {{SELECTED_ITEMS}}/{{TOTAL_ITEMS}} 条</div>
+    <div>Powered by <a href="https://github.com/xiaoxiehang/Horizon">Horizon</a></div>
+  </footer>
 </body>
 </html>

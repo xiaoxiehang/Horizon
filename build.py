@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 """Build static HTML from Horizon markdown summary."""
 import re
-import sys
 from pathlib import Path
 from datetime import datetime
 
@@ -38,7 +37,7 @@ def parse_markdown(md_file):
         title, url, score, summary, source_type, source_name, time_str, background, tags_str = match.groups()
         
         # Extract tags
-        tags = re.findall(r'#(\w[\w\s\-]*\w|\w+)', tags_str)
+        tags = re.findall(r'#(\w[\w\-]*\w|\w+)', tags_str)
         
         # Clean summary (first paragraph only, max 280 chars)
         summary_clean = summary.split('\n\n')[0].strip()
@@ -65,37 +64,140 @@ def parse_markdown(md_file):
         'items': items
     }
 
-def build_html(data, template_file, output_file):
-    """Generate HTML from template and data."""
-    template = Path(template_file).read_text(encoding='utf-8')
-    
+def build_html(data, output_file):
+    """Generate HTML with news list as main content."""
     # Build news items HTML
     items_html = []
     for item in data['items']:
-        tags_html = ''.join(f'<span class="tag">#{tag}</span>' for tag in item['tags'])
-        item_html = f'''
-      <a class="news-card" href="{item['url']}" target="_blank" rel="noopener">
-        <div class="card-header">
-          <span class="card-title">{item['title']}</span>
-          <span class="score-badge">⭐️ {item['score']}/10</span>
-        </div>
-        <p class="card-summary">{item['summary']}</p>
-        <div class="card-meta">
-          <div class="tags">
-            {tags_html}
-          </div>
-          <span class="source"><span class="source-dot"></span>{item['source']} · {item['time']}</span>
-        </div>
-      </a>'''
+        item_html = f'''    <article class="news-item">
+      <h3><a href="{item['url']}" target="_blank">{item['title']}</a></h3>
+      <div class="meta">
+        <span class="score">⭐️ {item['score']}</span>
+        <span class="source">{item['source']}</span>
+        <span class="time">{item['time']}</span>
+      </div>
+      <p class="content">{item['summary']}</p>
+    </article>'''
         items_html.append(item_html)
     
     news_items = '\n'.join(items_html)
     
-    # Replace placeholders
-    html = template.replace('{{DATE}}', data['date'])
-    html = html.replace('{{TOTAL_ITEMS}}', str(data['total_items']))
-    html = html.replace('{{SELECTED_ITEMS}}', str(data['selected_items']))
-    html = html.replace('<!-- NEWS_ITEMS_PLACEHOLDER -->', news_items)
+    # Build complete HTML
+    html = f'''<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Horizon Daily</title>
+  <style>
+    * {{ margin: 0; padding: 0; box-sizing: border-box; }}
+    body {{
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: #fafafa;
+      color: #1a1a1a;
+      line-height: 1.6;
+      padding: 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }}
+    header {{
+      margin-bottom: 30px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #eee;
+    }}
+    header h1 {{
+      font-size: 1.8em;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }}
+    header .date {{
+      color: #666;
+      font-size: 0.9em;
+    }}
+    .news-list {{
+      display: grid;
+      gap: 16px;
+      margin-bottom: 60px;
+    }}
+    .news-item {{
+      background: white;
+      padding: 20px 24px;
+      border-radius: 10px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+      transition: transform 0.15s, box-shadow 0.15s;
+    }}
+    .news-item:hover {{
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }}
+    .news-item h3 {{
+      font-size: 1.05em;
+      font-weight: 500;
+      line-height: 1.5;
+      margin-bottom: 10px;
+    }}
+    .news-item h3 a {{
+      color: #1a1a1a;
+      text-decoration: none;
+    }}
+    .news-item h3 a:hover {{
+      color: #0070f3;
+    }}
+    .meta {{
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.8em;
+      color: #888;
+      margin-bottom: 10px;
+    }}
+    .meta .score {{
+      color: #0070f3;
+      font-weight: 500;
+    }}
+    .meta .source {{
+      color: #666;
+    }}
+    .content {{
+      color: #555;
+      font-size: 0.9em;
+      line-height: 1.7;
+    }}
+    footer {{
+      text-align: center;
+      padding: 30px 0;
+      border-top: 1px solid #eee;
+      color: #999;
+      font-size: 0.8em;
+    }}
+    footer .info {{
+      margin-bottom: 8px;
+    }}
+    footer a {{
+      color: #666;
+      text-decoration: none;
+    }}
+    footer a:hover {{
+      text-decoration: underline;
+    }}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Horizon Daily</h1>
+    <div class="date">{data['date']}</div>
+  </header>
+
+  <main class="news-list">
+{news_items}
+  </main>
+
+  <footer>
+    <div class="info">精选 {data['selected_items']}/{data['total_items']} 条新闻</div>
+    <div>Powered by <a href="https://github.com/xiaoxiehang/Horizon">Horizon</a> · AI-Driven News Aggregation</div>
+  </footer>
+</body>
+</html>'''
     
     # Write output
     Path(output_file).write_text(html, encoding='utf-8')
@@ -108,19 +210,19 @@ def main():
     summaries_dir = Path('data/summaries')
     if not summaries_dir.exists():
         print('❌ No summaries directory found')
-        sys.exit(1)
+        return
     
     summary_files = sorted(summaries_dir.glob('horizon-*-en.md'), reverse=True)
     if not summary_files:
         print('❌ No summary files found')
-        sys.exit(1)
+        return
     
     latest = summary_files[0]
     print(f'📄 Processing: {latest}')
     
     # Parse and build
     data = parse_markdown(latest)
-    build_html(data, 'docs/index.html', 'docs/index.html')
+    build_html(data, 'docs/index.html')
 
 if __name__ == '__main__':
     main()
