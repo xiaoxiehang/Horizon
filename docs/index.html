@@ -15,6 +15,20 @@
       max-width: 900px;
       margin: 0 auto;
     }
+    header {
+      margin-bottom: 30px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #eee;
+    }
+    header h1 {
+      font-size: 1.8em;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+    header .date {
+      color: #666;
+      font-size: 0.9em;
+    }
     .news-list {
       display: grid;
       gap: 16px;
@@ -84,13 +98,143 @@
   </style>
 </head>
 <body>
-  <div class="news-list">
-    {{NEWS_ITEMS}}
-  </div>
+  <header>
+    <h1>Horizon Daily</h1>
+    <div class="date">2026-06-15</div>
+  </header>
+
+  <main class="news-list">
+    <article class="news-item">
+      <h3><a href="https://www.salesforce.com/news/press-releases/2026/06/15/salesforce-signs-definitive-agreement-to-acquire-fin/?bc=HL" target="_blank">Salesforce to Acquire AI Customer Support Startup Fin for $3.6 Billion</a></h3>
+      <div class="meta">
+        <span class="score">⭐️ 8.0</span>
+        <span class="source">Hacker News RSS</span>
+        <span class="time">Jun 15, 12:08 · [Discussion](https://news.ycombinator.com/item?id=48540126)</span>
+      </div>
+      <p class="content">Salesforce has signed a definitive agreement to acquire Fin, formerly known as Intercom, for $3.6 billion to bolster its AI-driven customer support capabilities. This move comes shortly after the company's rebrand to Fin and aims to integrate advanced AI agents directly into t...</p>
+    </article>
+    <article class="news-item">
+      <h3><a href="https://techcrunch.com/2026/06/15/a-satellite-just-learned-to-find-things-on-its-own-heres-what-that-means/" target="_blank">Earth Observation Satellite Achieves Autonomous Target Identification Using On-Board AI</a></h3>
+      <div class="meta">
+        <span class="score">⭐️ 8.0</span>
+        <span class="source">TechCrunch</span>
+        <span class="time">Jun 15, 12:00</span>
+      </div>
+      <p class="content">In April, an Earth observation satellite successfully used on-board artificial intelligence to autonomously locate and identify specific targets without relying on ground stations. This marks the first time such autonomous machine learning has been executed directly in space. ...</p>
+    </article>
+    <article class="news-item">
+      <h3><a href="https://dev.to/npayyappilly/the-human-in-the-loop-sre-designing-automation-escalation-policies-for-ai-assisted-operations-2c7f" target="_blank">Designing Human-in-the-Loop Escalation Policies for AI-Assisted SRE</a></h3>
+      <div class="meta">
+        <span class="score">⭐️ 8.0</span>
+        <span class="source">DEV Community</span>
+        <span class="time">Jun 15, 16:00</span>
+      </div>
+      <p class="content">The article introduces a comprehensive framework for human-in-the-loop escalation policies in AI-assisted Site Reliability Engineering (SRE), addressing the critical speed asymmetry between automated system propagation and human response. It outlines a five-level automation au...</p>
+    </article>
+    <article class="news-item">
+      <h3><a href="https://daniel.haxx.se/blog/2026/06/15/curl-summer-of-bliss/" target="_blank">Curl Pauses Vulnerability Reports for July 2026 to Prevent Maintainer Burnout</a></h3>
+      <div class="meta">
+        <span class="score">⭐️ 8.0</span>
+        <span class="source">Hacker News RSS</span>
+        <span class="time">Jun 15, 06:02</span>
+      </div>
+      <p class="content">Daniel Stenberg, the creator of the curl project, announced that the project will not accept any vulnerability reports during July 2026. This temporary pause, dubbed the 'Summer of Bliss,' is intended to give the core maintainers a break from the constant pressure of security ...</p>
+    </article>
+    <article class="news-item">
+      <h3><a href="https://www.iroh.computer/blog/v1" target="_blank">Iroh Peer-to-Peer Networking Protocol Reaches 1.0 Stable Release</a></h3>
+      <div class="meta">
+        <span class="score">⭐️ 7.0</span>
+        <span class="source">Hacker News RSS</span>
+        <span class="time">Jun 15, 15:13 · [Discussion](https://news.ycombinator.com/item?id=48542480)</span>
+      </div>
+      <p class="content">Iroh, a peer-to-peer networking protocol and library, has officially launched its 1.0 stable release to simplify reliable P2P connections. The release introduces the ability for developers to implement custom transports alongside the default IPv4, IPv6, and relay transports. T...</p>
+    </article>
+    <article class="news-item">
+      <h3><a href="https://news.ycombinator.com/item?id=48542064" target="_blank">Hetzner Increases Bare Metal Dedicated Server Prices by 3-4x</a></h3>
+      <div class="meta">
+        <span class="score">⭐️ 7.0</span>
+        <span class="source">Hacker News RSS</span>
+        <span class="time">Jun 15, 14:44</span>
+      </div>
+      <p class="content">Just months after a 30% increase, Hetzner has drastically raised its bare metal dedicated server prices by 3 to 4 times, with models like the AX102 jumping from €124 to €454. This massive price hike signals the end of the ultra-cheap bare metal hosting era, significantly impac...</p>
+    </article>
+    <article class="news-item">
+      <h3><a href="https://platform.claude.com/docs/en/cli-sdks-libraries/libraries/apple-foundation-models" target="_blank">Apple Opens Foundation Models Framework to Third-Party LLM Providers</a></h3>
+      <div class="meta">
+        <span class="score">⭐️ 7.0</span>
+        <span class="source">Hacker News RSS</span>
+        <span class="time">Jun 15, 04:55 · [Discussion](https://news.ycombinator.com/item?id=48536776)</span>
+      </div>
+      <p class="content">Apple has announced the opening of its Foundation Models framework to third-party cloud model providers like Claude and Gemini through a new standardized LanguageModel protocol. This integration will be available starting with iOS 27, macOS 27, iPadOS 27, visionOS 27, and watc...</p>
+    </article>
+    <article class="news-item">
+      <h3><a href="https://www.wired.com/story/meta-rank-one-computing-face-recognition-smart-glasses/" target="_blank">Meta Partners With Pentagon Supplier for Smart Glasses Face Recognition</a></h3>
+      <div class="meta">
+        <span class="score">⭐️ 6.0</span>
+        <span class="source">Wired</span>
+        <span class="time">Jun 15, 09:00</span>
+      </div>
+      <p class="content">Meta has collaborated with Rank One Computing, a defense contractor supplying the Pentagon, to prototype facial recognition technology for its smart glasses application. This partnership raises significant privacy and AI ethics concerns, as integrating facial recognition into ...</p>
+    </article>
+    <article class="news-item">
+      <h3><a href="https://dev.to/pixel-wraith/the-real-reason-your-prs-get-big-5cm3" target="_blank">The Real Reason Your Pull Requests Get Too Big</a></h3>
+      <div class="meta">
+        <span class="score">⭐️ 6.0</span>
+        <span class="source">DEV Community</span>
+        <span class="time">Jun 15, 16:07</span>
+      </div>
+      <p class="content">The author argues that excessively large pull requests stem from a lack of training in task decomposition rather than poor discipline among software engineers. By reframing the issue as a skill gap, the article highlights how breaking work into smaller, reviewable chunks impro...</p>
+    </article>
+    <article class="news-item">
+      <h3><a href="https://dev.to/rarenode/mistral-vs-llama-3-which-open-llm-api-actually-wins-in-2026-5h0h" target="_blank">Evaluating and Routing Open-Weight LLMs to Optimize API Costs</a></h3>
+      <div class="meta">
+        <span class="score">⭐️ 6.0</span>
+        <span class="source">DEV Community</span>
+        <span class="time">Jun 15, 16:05</span>
+      </div>
+      <p class="content">A backend engineer conducted a real-world benchmark comparing open-weight models like DeepSeek, Qwen, and GLM against GPT-4o, revealing massive cost differentials and advocating for task-specific model routing. As LLM API costs can scale massively in production, understanding ...</p>
+    </article>
+    <article class="news-item">
+      <h3><a href="https://dev.to/pavelespitia/building-a-local-ai-code-reviewer-with-ollama-that-catches-bugs-before-your-team-49d3" target="_blank">Building a Local AI Code Reviewer with Ollama and TypeScript</a></h3>
+      <div class="meta">
+        <span class="score">⭐️ 6.0</span>
+        <span class="source">DEV Community</span>
+        <span class="time">Jun 15, 16:04</span>
+      </div>
+      <p class="content">A new tutorial provides a step-by-step guide to building a privacy-preserving, local AI code reviewer using Ollama and TypeScript that runs as a git pre-commit hook. The tool analyzes staged code diffs using the local qwen2.5-coder:7b model and returns structured JSON findings...</p>
+    </article>
+    <article class="news-item">
+      <h3><a href="https://dev.to/thejoud1997/4060-days-system-design-questions-5dgm" target="_blank">Solving Main Thread CSV Parsing Bottlenecks in React</a></h3>
+      <div class="meta">
+        <span class="score">⭐️ 6.0</span>
+        <span class="source">DEV Community</span>
+        <span class="time">Jun 15, 15:56</span>
+      </div>
+      <p class="content">This post outlines a realistic frontend performance bottleneck where synchronous CSV parsing on the main thread freezes the browser, and proposes four architectural solutions including Web Workers and time-slicing. Addressing main thread blocking is critical for maintaining hi...</p>
+    </article>
+    <article class="news-item">
+      <h3><a href="https://github.com/sammysltd/euromesh" target="_blank">EuroMesh proposes distributed computing to train frontier AI models in Europe.</a></h3>
+      <div class="meta">
+        <span class="score">⭐️ 6.0</span>
+        <span class="source">Hacker News RSS</span>
+        <span class="time">Jun 15, 13:31</span>
+      </div>
+      <p class="content">A new open-source project named EuroMesh has been proposed to pool distributed hardware resources across Europe to train a frontier artificial intelligence model. The initiative seeks to determine if the continent can achieve AI compute sovereignty using its own existing infra...</p>
+    </article>
+    <article class="news-item">
+      <h3><a href="https://blog.apnic.net/2025/12/08/21-years-and-counting-of-eight-fallacies-of-distributed-computing/" target="_blank">A Retrospective on the Enduring Eight Fallacies of Distributed Computing</a></h3>
+      <div class="meta">
+        <span class="score">⭐️ 6.0</span>
+        <span class="source">Hacker News RSS</span>
+        <span class="time">Jun 15, 00:07</span>
+      </div>
+      <p class="content">The APNIC blog published a retrospective analysis examining the classic 'eight fallacies of distributed computing' 21 years after their popularization, evaluating their continued relevance in modern system design. Revisiting these foundational assumptions is crucial for softwa...</p>
+    </article>
+  </main>
 
   <footer>
-    <div class="info">{{DATE}} · 精选 {{SELECTED_ITEMS}}/{{TOTAL_ITEMS}} 条</div>
-    <div>Powered by <a href="https://github.com/xiaoxiehang/Horizon">Horizon</a></div>
+    <div class="info">精选 23/76 条新闻</div>
+    <div>Powered by <a href="https://github.com/xiaoxiehang/Horizon">Horizon</a> · AI-Driven News Aggregation</div>
   </footer>
 </body>
 </html>
