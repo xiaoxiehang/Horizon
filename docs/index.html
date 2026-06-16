@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Horizon Daily</title>
+  <title>Horizon 每日速递</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
@@ -58,21 +58,6 @@
     .news-item h3 a:hover {
       color: #0070f3;
     }
-    .meta {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-size: 0.8em;
-      color: #888;
-      margin-bottom: 10px;
-    }
-    .meta .score {
-      color: #0070f3;
-      font-weight: 500;
-    }
-    .meta .source {
-      color: #666;
-    }
     .content {
       color: #555;
       font-size: 0.9em;
@@ -85,9 +70,6 @@
       color: #999;
       font-size: 0.8em;
     }
-    footer .info {
-      margin-bottom: 8px;
-    }
     footer a {
       color: #666;
       text-decoration: none;
@@ -99,142 +81,103 @@
 </head>
 <body>
   <header>
-    <h1>Horizon Daily</h1>
-    <div class="date">2026-06-15</div>
+    <h1>Horizon 每日速递</h1>
+    <div class="date">2026-06-16</div>
   </header>
 
   <main class="news-list">
     <article class="news-item">
-      <h3><a href="https://www.salesforce.com/news/press-releases/2026/06/15/salesforce-signs-definitive-agreement-to-acquire-fin/?bc=HL" target="_blank">Salesforce to Acquire AI Customer Support Startup Fin for $3.6 Billion</a></h3>
-      <div class="meta">
-        <span class="score">⭐️ 8.0</span>
-        <span class="source">Hacker News RSS</span>
-        <span class="time">Jun 15, 12:08 · [Discussion](https://news.ycombinator.com/item?id=48540126)</span>
-      </div>
-      <p class="content">Salesforce has signed a definitive agreement to acquire Fin, formerly known as Intercom, for $3.6 billion to bolster its AI-driven customer support capabilities. This move comes shortly after the company's rebrand to Fin and aims to integrate advanced AI agents directly into t...</p>
+      <h3><a href="https://roman.pt/posts/linkedin-backdoor/" target="_blank">虚假 LinkedIn 招聘隐藏复杂供应链攻击</a></h3>
+      <p class="content">一名开发者发现了一起复杂的供应链攻击，虚假的 LinkedIn 招聘人员分享了一个恶意的 GitHub 仓库，该仓库在 npm install 期间会自动执行后门载荷。攻击者利用 npm 的自动生命周期脚本，以技术面试任务为幌子入侵了受害者的机器。 这一事件凸显了一种日益增长且高度针对性的威胁向量，即开发者在求职过程中被社会工程学诱导执行恶意代码。它强调了求职工程师迫切需要更严格的代码审查实践，并提高对 npm 生命周期脚本漏洞的认识。 恶意载荷被隐藏在注释掉的测试代码中，并由 prepare 生命周期脚本触发，该脚本在 npm install 后...</p>
     </article>
     <article class="news-item">
-      <h3><a href="https://techcrunch.com/2026/06/15/a-satellite-just-learned-to-find-things-on-its-own-heres-what-that-means/" target="_blank">Earth Observation Satellite Achieves Autonomous Target Identification Using On-Board AI</a></h3>
-      <div class="meta">
-        <span class="score">⭐️ 8.0</span>
-        <span class="source">TechCrunch</span>
-        <span class="time">Jun 15, 12:00</span>
-      </div>
-      <p class="content">In April, an Earth observation satellite successfully used on-board artificial intelligence to autonomously locate and identify specific targets without relying on ground stations. This marks the first time such autonomous machine learning has been executed directly in space. ...</p>
+      <h3><a href="https://www.iroh.computer/blog/v1" target="_blank">Iroh 1.0：稳定的应用层点对点网络库</a></h3>
+      <p class="content">Iroh 1.0 已正式发布，这是一个稳定的应用层点对点网络库，允许使用拨号密钥（dial keys）代替 IP 地址来建立安全的、可穿透 NAT 的连接。它内置了对 IPv4、IPv6 和中继传输的支持，并允许开发者实现自定义传输协议。 与 Tailscale 等网络层方案不同，Iroh 在应用层运行，使开发者能够将点对点连接直接嵌入应用中，而无需最终用户管理外部网络账户或配置。这极大地降低了构建去中心化、点对点应用和分布式系统的门槛。 该库使用 QUIC 进行点对点连接，要求节点在握手期间了解彼此的 NodeId 以实现端到端加密和身份验证。虽...</p>
     </article>
     <article class="news-item">
-      <h3><a href="https://dev.to/npayyappilly/the-human-in-the-loop-sre-designing-automation-escalation-policies-for-ai-assisted-operations-2c7f" target="_blank">Designing Human-in-the-Loop Escalation Policies for AI-Assisted SRE</a></h3>
-      <div class="meta">
-        <span class="score">⭐️ 8.0</span>
-        <span class="source">DEV Community</span>
-        <span class="time">Jun 15, 16:00</span>
-      </div>
-      <p class="content">The article introduces a comprehensive framework for human-in-the-loop escalation policies in AI-assisted Site Reliability Engineering (SRE), addressing the critical speed asymmetry between automated system propagation and human response. It outlines a five-level automation au...</p>
+      <h3><a href="https://news.ycombinator.com/item?id=48542100" target="_blank">HN 讨论：用本地模型替代云端大模型进行日常编码</a></h3>
+      <p class="content">一个高度活跃的 Hacker News 帖子探讨了用本地模型替代 Claude 和 GPT 等前沿云端大模型进行日常软件开发的实际可行性。开发者们正在分享具体的硬件配置、Qwen 和 Gemma 等模型选择以及编码工具，以实现快速、离线且低成本的编码辅助。 这一转变凸显了开发者在日常工作流中寻求数据隐私、节省成本以及摆脱云端 API 订阅依赖的日益增长的趋势。它表明，现代消费级和准专业级硬件结合高效的混合专家（MoE）模型，现在可以在不依赖昂贵云基础设施的情况下提供可行的编码辅助。 用户报告称，在从 Apple Silicon Mac 到双 RTX...</p>
     </article>
     <article class="news-item">
-      <h3><a href="https://daniel.haxx.se/blog/2026/06/15/curl-summer-of-bliss/" target="_blank">Curl Pauses Vulnerability Reports for July 2026 to Prevent Maintainer Burnout</a></h3>
-      <div class="meta">
-        <span class="score">⭐️ 8.0</span>
-        <span class="source">Hacker News RSS</span>
-        <span class="time">Jun 15, 06:02</span>
-      </div>
-      <p class="content">Daniel Stenberg, the creator of the curl project, announced that the project will not accept any vulnerability reports during July 2026. This temporary pause, dubbed the 'Summer of Bliss,' is intended to give the core maintainers a break from the constant pressure of security ...</p>
+      <h3><a href="https://techcrunch.com/2026/06/15/the-us-governments-anthropic-models-ban-was-never-about-an-ai-jailbreak/" target="_blank">美国政府迫使 Anthropic 限制外国访问其最新 AI 模型</a></h3>
+      <p class="content">6 月 12 日，美国政府下令 Anthropic 阻止外国访问其新发布的 Fable 5 和 Mythos 5 网络安全模型，甚至包括其海外员工。这一史无前例的指令迫使该公司突然对国际用户下线其最强大的模型。 这一事件标志着美国政府对 AI 行业干预的显著升级，表明其正转向对前沿 AI 能力实施激进的出口管制。它凸显了国家安全目标与先进网络安全工具全球部署之间日益加剧的紧张关系。 尽管政府采取了行动，数十名网络安全专家仍敦促白宫取消这些限制，警告该禁令将严重阻碍防御者保护软件和产品安全的能力。同时，Anthropic 高管与白宫官员在 Fable...</p>
     </article>
     <article class="news-item">
-      <h3><a href="https://www.iroh.computer/blog/v1" target="_blank">Iroh Peer-to-Peer Networking Protocol Reaches 1.0 Stable Release</a></h3>
-      <div class="meta">
-        <span class="score">⭐️ 7.0</span>
-        <span class="source">Hacker News RSS</span>
-        <span class="time">Jun 15, 15:13 · [Discussion](https://news.ycombinator.com/item?id=48542480)</span>
-      </div>
-      <p class="content">Iroh, a peer-to-peer networking protocol and library, has officially launched its 1.0 stable release to simplify reliable P2P connections. The release introduces the ability for developers to implement custom transports alongside the default IPv4, IPv6, and relay transports. T...</p>
+      <h3><a href="https://techcrunch.com/2026/06/15/salesforce-acquires-ai-customer-service-platform-fin-for-3-6b/" target="_blank">Salesforce 斥资 36 亿美元收购 AI 客服平台 Fin</a></h3>
+      <p class="content">Salesforce 宣布以 36 亿美元收购 AI 客服平台 Fin，将其技术和团队整合到 Agentforce 企业 AI 代理平台中。此举大幅增强了 Salesforce 利用自定义 AI 代理自动化客户支持任务的能力。 这笔高达 36 亿美元的收购凸显了企业 AI 客服领域激烈的竞争和极高的市场估值，特别是 Salesforce 旨在对抗 Sierra 等竞争对手。这标志着一个重大的战略转变，即 CRM 提供商正积极吸收专业化的 AI 代理，以防止它们成为核心 CRM 生态系统之外的独立控制点。 最近刚完成品牌重塑且被超过 12000 个品...</p>
     </article>
     <article class="news-item">
-      <h3><a href="https://news.ycombinator.com/item?id=48542064" target="_blank">Hetzner Increases Bare Metal Dedicated Server Prices by 3-4x</a></h3>
-      <div class="meta">
-        <span class="score">⭐️ 7.0</span>
-        <span class="source">Hacker News RSS</span>
-        <span class="time">Jun 15, 14:44</span>
-      </div>
-      <p class="content">Just months after a 30% increase, Hetzner has drastically raised its bare metal dedicated server prices by 3 to 4 times, with models like the AX102 jumping from €124 to €454. This massive price hike signals the end of the ultra-cheap bare metal hosting era, significantly impac...</p>
+      <h3><a href="https://techcrunch.com/2026/06/15/a-satellite-just-learned-to-find-things-on-its-own-heres-what-that-means/" target="_blank">地球观测卫星实现自主在轨 AI 目标检测</a></h3>
+      <p class="content">今年 4 月，一颗地球观测卫星成功利用自主在轨 AI 识别和定位目标，完全无需依赖地面处理。这是卫星首次利用星载计算机视觉独立寻找特定目标。 这一突破通过在太空中直接处理数据而非将原始图像传回地面，大幅降低了地球观测的带宽需求和延迟。它标志着边缘 AI 和自主系统的重大里程碑，对航空航天、遥感和分布式边缘计算具有深远的运营影响。 尽管简短的内容中未详细说明具体的卫星型号和 AI 架构，但这一成就将现有的计算机视觉技术应用到了环境恶劣、资源受限的太空中。这种运营模式的转变消除了传统上需要下传海量原始卫星图像进行地面分析的瓶颈。</p>
     </article>
     <article class="news-item">
-      <h3><a href="https://platform.claude.com/docs/en/cli-sdks-libraries/libraries/apple-foundation-models" target="_blank">Apple Opens Foundation Models Framework to Third-Party LLM Providers</a></h3>
-      <div class="meta">
-        <span class="score">⭐️ 7.0</span>
-        <span class="source">Hacker News RSS</span>
-        <span class="time">Jun 15, 04:55 · [Discussion](https://news.ycombinator.com/item?id=48536776)</span>
-      </div>
-      <p class="content">Apple has announced the opening of its Foundation Models framework to third-party cloud model providers like Claude and Gemini through a new standardized LanguageModel protocol. This integration will be available starting with iOS 27, macOS 27, iPadOS 27, visionOS 27, and watc...</p>
+      <h3><a href="https://www.richardosgood.com/posts/banned-book-library/" target="_blank">将 Wi-Fi 智能灯泡改造为离线禁书图书馆</a></h3>
+      <p class="content">一篇技术文章详细介绍了如何破解并重新利用普通的 Wi-Fi 智能灯泡，以托管一个离线的、抗审查的禁书图书馆。该项目将日常物联网硬件转化为本地文件服务器，用于在无互联网连接的情况下分发受限文献。 该项目凸显了无处不在且廉价的物联网设备作为信息自由和抗审查去中心化节点的潜力。它展示了硬件黑客技术如何赋能个人，在数字监控和内容控制日益严格的环境中保存和分享受限知识。 该黑客技术涉及提取智能灯泡的固件或访问其底层的基于 Linux 的操作系统，以安装轻量级 Web 服务器。用户连接到灯泡的本地 Wi-Fi 接入点，即可直接在其设备上浏览和下载托管的电子书。</p>
     </article>
     <article class="news-item">
-      <h3><a href="https://www.wired.com/story/meta-rank-one-computing-face-recognition-smart-glasses/" target="_blank">Meta Partners With Pentagon Supplier for Smart Glasses Face Recognition</a></h3>
-      <div class="meta">
-        <span class="score">⭐️ 6.0</span>
-        <span class="source">Wired</span>
-        <span class="time">Jun 15, 09:00</span>
-      </div>
-      <p class="content">Meta has collaborated with Rank One Computing, a defense contractor supplying the Pentagon, to prototype facial recognition technology for its smart glasses application. This partnership raises significant privacy and AI ethics concerns, as integrating facial recognition into ...</p>
+      <h3><a href="https://docs.hetzner.com/general/infrastructure-and-availability/price-adjustment/#cloud-servers" target="_blank">Hetzner 宣布云服务器大幅涨价</a></h3>
+      <p class="content">Hetzner 宣布对其云服务器产品进行大幅价格调整，部分配置的价格涨幅高达之前的三倍。这一变化反映了整个行业在硬件可用性和定价方面的更广泛转变。 作为开发者和初创公司非常受欢迎且极具性价比的云提供商，Hetzner 的定价变化直接影响许多科技公司的基础设施预算。此举凸显了由 AI 需求和供应链限制推动的硬件成本上升这一更广泛的宏观经济趋势。 社区成员指出，此次涨价并不统一，德国数据中心的涨幅相比其他地区微乎其微。一些用户对某些配置高达 3 倍的涨幅表示震惊，而另一些人则指出内存和磁盘的稀缺是主要驱动因素。</p>
     </article>
     <article class="news-item">
-      <h3><a href="https://dev.to/pixel-wraith/the-real-reason-your-prs-get-big-5cm3" target="_blank">The Real Reason Your Pull Requests Get Too Big</a></h3>
-      <div class="meta">
-        <span class="score">⭐️ 6.0</span>
-        <span class="source">DEV Community</span>
-        <span class="time">Jun 15, 16:07</span>
-      </div>
-      <p class="content">The author argues that excessively large pull requests stem from a lack of training in task decomposition rather than poor discipline among software engineers. By reframing the issue as a skill gap, the article highlights how breaking work into smaller, reviewable chunks impro...</p>
+      <h3><a href="https://www.wsj.com/business/deals/fox-roku-deal-f6e564f9" target="_blank">福克斯据报正在收购流媒体平台 Roku。</a></h3>
+      <p class="content">福克斯公司据报正在收购占据主导地位的智能电视和流媒体平台 Roku，这是一项重大的媒体与技术并购。这笔交易将美国家庭电视硬件的重要控制权转移给了一家大型内容提供商。 此次收购引发了对平台中立性的严重担忧，因为一家大型内容创作者现在拥有了竞争流媒体服务的分发渠道。这可能会通过优先考虑福克斯的内容和广告库存，从根本上改变广告支持的流媒体格局和智能电视生态系统架构。 Roku 控制着大约 30%到 50%的美国家庭的电视操作系统，使其成为媒体分发的高度集中的控制点。用户和行业观察者已经在讨论平台内广告增加以及中立界面丧失的可能性。</p>
     </article>
     <article class="news-item">
-      <h3><a href="https://dev.to/rarenode/mistral-vs-llama-3-which-open-llm-api-actually-wins-in-2026-5h0h" target="_blank">Evaluating and Routing Open-Weight LLMs to Optimize API Costs</a></h3>
-      <div class="meta">
-        <span class="score">⭐️ 6.0</span>
-        <span class="source">DEV Community</span>
-        <span class="time">Jun 15, 16:05</span>
-      </div>
-      <p class="content">A backend engineer conducted a real-world benchmark comparing open-weight models like DeepSeek, Qwen, and GLM against GPT-4o, revealing massive cost differentials and advocating for task-specific model routing. As LLM API costs can scale massively in production, understanding ...</p>
+      <h3><a href="https://forgottenbytes.net/commander_keen.html" target="_blank">技术白皮书深度解析经典游戏《指挥官基恩》引擎</a></h3>
+      <p class="content">Forgotten Bytes 网站发布了一篇新的技术白皮书，深入分析了经典 DOS 游戏《指挥官基恩》所使用的游戏引擎、架构以及历史上的优化技术。 这篇深度解析突出了早期的突破性优化技术（如早期 PC 硬件上的平滑滚动），为现代图形程序员和复古计算爱好者提供了宝贵的见解。它还通过记录早期开发者如何克服严重的硬件限制，保存了重要的软件历史。 该白皮书具体探讨了 John Carmack 和 John Romero 如何实现平滑滚动，这项技术在当时的 PC 上具有革命性，但在 SNES 等主机上已是标准配置。这篇文章是更广泛的游戏引擎白皮书系列的一部...</p>
     </article>
     <article class="news-item">
-      <h3><a href="https://dev.to/pavelespitia/building-a-local-ai-code-reviewer-with-ollama-that-catches-bugs-before-your-team-49d3" target="_blank">Building a Local AI Code Reviewer with Ollama and TypeScript</a></h3>
-      <div class="meta">
-        <span class="score">⭐️ 6.0</span>
-        <span class="source">DEV Community</span>
-        <span class="time">Jun 15, 16:04</span>
-      </div>
-      <p class="content">A new tutorial provides a step-by-step guide to building a privacy-preserving, local AI code reviewer using Ollama and TypeScript that runs as a git pre-commit hook. The tool analyzes staged code diffs using the local qwen2.5-coder:7b model and returns structured JSON findings...</p>
+      <h3><a href="https://roszigit.com/en/blog/timescaledb-compression-hypercore" target="_blank">TimescaleDB 的列式存储与压缩技术</a></h3>
+      <p class="content">最近的一篇技术深度文章探讨了 TimescaleDB 的 Hypercore 和列式存储机制，重点介绍了它们如何在 PostgreSQL 中实现高达 98% 的压缩率。该文还附带了社区讨论，详细说明了查询性能的权衡以及时序数据的优化技术。 了解这些压缩技术对于处理海量时序和物联网数据集的开发者至关重要，因为它直接影响存储成本和查询性能。社区的见解揭示了 CPU 使用率、I/O 操作和分析速度之间的实际权衡，有助于指导更好的架构决策。 社区专家指出，压缩并非万能药；压缩方法必须加速过滤拒绝或扫描速度，而不仅仅是用 CPU 换取 I/O。高级分析优化包...</p>
     </article>
     <article class="news-item">
-      <h3><a href="https://dev.to/thejoud1997/4060-days-system-design-questions-5dgm" target="_blank">Solving Main Thread CSV Parsing Bottlenecks in React</a></h3>
-      <div class="meta">
-        <span class="score">⭐️ 6.0</span>
-        <span class="source">DEV Community</span>
-        <span class="time">Jun 15, 15:56</span>
-      </div>
-      <p class="content">This post outlines a realistic frontend performance bottleneck where synchronous CSV parsing on the main thread freezes the browser, and proposes four architectural solutions including Web Workers and time-slicing. Addressing main thread blocking is critical for maintaining hi...</p>
+      <h3><a href="https://www.monash.edu/news/articles/copper-drug-restores-memory-and-clears-toxic-alzheimers-proteins" target="_blank">铜转运药物在小鼠体内恢复记忆并清除阿尔茨海默症毒性蛋白</a></h3>
+      <p class="content">莫纳什大学的研究人员发现了一种铜转运药物，该药物在动物模型中成功恢复了记忆并清除了有毒的阿尔茨海默症蛋白。由于该化合物已经针对其他疾病进行了安全性评估，它有很大潜力快速进入人体临床试验。 这代表了阿尔茨海默症治疗的一种新方法，通过靶向铜转运而不是仅仅关注淀粉样蛋白清除，从而可能绕过过去失败疗法的局限性。如果在人体试验中取得成功，它将为这种毁灭性的神经退行性疾病提供一种急需的有效治疗方法。 该研究目前处于临床前阶段，迄今为止仅在动物模型中进行了测试。虽然该药物具有可加速人体试验的先前安全数据，但过去 35 年中靶向淀粉样蛋白的阿尔茨海默症药物的高失败...</p>
     </article>
     <article class="news-item">
-      <h3><a href="https://github.com/sammysltd/euromesh" target="_blank">EuroMesh proposes distributed computing to train frontier AI models in Europe.</a></h3>
-      <div class="meta">
-        <span class="score">⭐️ 6.0</span>
-        <span class="source">Hacker News RSS</span>
-        <span class="time">Jun 15, 13:31</span>
-      </div>
-      <p class="content">A new open-source project named EuroMesh has been proposed to pool distributed hardware resources across Europe to train a frontier artificial intelligence model. The initiative seeks to determine if the continent can achieve AI compute sovereignty using its own existing infra...</p>
+      <h3><a href="https://techcrunch.com/2026/06/15/spacex-is-public-everything-you-need-to-know-post-ipo/" target="_blank">SpaceX 正式上市：IPO 后全面分析</a></h3>
+      <p class="content">SpaceX 已正式完成首次公开募股，从一家私营航空航天公司转变为上市公司。TechCrunch 发布了一份全面的报道，详细解析了 S-1 注册文件、IPO 前交易以及此次转型中的赢家与输家。 作为一项改变行业的重大事件，SpaceX 的 IPO 对科技和航空航天领域产生了深远影响，不仅带来了新的投资机会，还重塑了商业太空市场。这也为了解这家全球最知名私营公司的财务状况和未来轨迹提供了关键洞察。 该报道特别强调了 SpaceX S-1 注册文件中的核心洞察，并分析了 IPO 前交易对早期投资者和更广泛市场的影响。它还探讨了哪些利益相关者将从上市中获...</p>
     </article>
     <article class="news-item">
-      <h3><a href="https://blog.apnic.net/2025/12/08/21-years-and-counting-of-eight-fallacies-of-distributed-computing/" target="_blank">A Retrospective on the Enduring Eight Fallacies of Distributed Computing</a></h3>
-      <div class="meta">
-        <span class="score">⭐️ 6.0</span>
-        <span class="source">Hacker News RSS</span>
-        <span class="time">Jun 15, 00:07</span>
-      </div>
-      <p class="content">The APNIC blog published a retrospective analysis examining the classic 'eight fallacies of distributed computing' 21 years after their popularization, evaluating their continued relevance in modern system design. Revisiting these foundational assumptions is crucial for softwa...</p>
+      <h3><a href="https://techcrunch.com/2026/06/15/uk-unveils-sweeping-social-media-ban-for-users-under-16/" target="_blank">英国宣布全面禁止 16 岁以下用户使用社交媒体</a></h3>
+      <p class="content">英国政府宣布全面禁止 16 岁以下未成年人使用社交媒体，并为部分聊天机器人设定了最低年龄限制。该规定适用于 Snapchat、TikTok、YouTube、Instagram、Facebook 和 X 等主要平台。 这一重大监管转变将迫使主要科技平台投入大量工程和合规资源，以实施严格的年龄验证系统。这反映了全球政府日益增强的干预趋势，旨在保护未成年人免受互联网和人工智能生成内容的潜在危害。 该禁令专门针对主要社交媒体平台，并为某些 AI 聊天机器人设定了最低年龄限制，以保护年轻人免受危险网络内容的侵害。科技公司需要彻底改革其用户注册和验证流程，以遵...</p>
+    </article>
+    <article class="news-item">
+      <h3><a href="https://www.theverge.com/tech/950005/google-chrome-removing-ad-blocker-loopholes" target="_blank">Chrome 永久禁用旧版 Manifest V2 广告拦截漏洞</a></h3>
+      <p class="content">预计于今年 6 月底和 7 月发布的谷歌 Chrome 150 和 151 版本，将永久禁用允许旧版 Manifest V2 广告拦截器继续运行的剩余变通方法。此举标志着该浏览器向 Manifest V3 框架过渡的最终完成。 这一改变永久性地改变了浏览器扩展生态系统，消除了使用原版 uBlock Origin 等强大的旧版广告拦截工具的能力。它极大地影响了数百万依赖这些扩展的 Chrome 用户的网络隐私和广告拦截能力。 新的 Manifest V3 框架依赖于 declarativeNetRequest API，该 API 限制了过滤规则的数量...</p>
+    </article>
+    <article class="news-item">
+      <h3><a href="https://www.wired.com/story/meta-rank-one-computing-face-recognition-smart-glasses/" target="_blank">Meta 与五角大楼承包商合作开发智能眼镜人脸识别</a></h3>
+      <p class="content">Meta 已与五角大楼承包商 Rank One Computing 合作，为其智能眼镜应用开发人脸识别技术原型。这一合作通过一份调查报告被曝光，凸显了该功能的内部开发情况。 这一合作引发了重大的隐私和伦理担忧，凸显了消费科技公司与国防承包商之间日益紧密的交集。它引发了关于在日常可穿戴设备中部署生物识别监控的关键辩论。 Rank One Computing 的董事会包括前 CIA 副局长和前 FBI 科学主管等知名前情报官员。该人脸识别技术目前正用于 Meta 智能眼镜应用的内部原型开发。</p>
+    </article>
+    <article class="news-item">
+      <h3><a href="https://dev.to/tech_nuggets/rlhf-vs-dpo-vs-ipo-vs-kto-which-alignment-method-should-you-use-ggm" target="_blank">比较用于大语言模型对齐的 RLHF、DPO、IPO 和 KTO 方法</a></h3>
+      <p class="content">本实用指南全面比较了四种主要的大语言模型对齐方法——RLHF、DPO、IPO 和 KTO，重点分析了它们的数据需求、计算成本和生产稳定性。它帮助从业者根据现实世界的限制条件而非仅仅是理论性能来选择合适的方法。 选择合适的对齐方法直接影响生产环境中的发布时间表、计算预算和模型鲁棒性。理解成对偏好数据与二元反馈之间，或复杂的 PPO 流程与单循环优化之间的权衡，可以避免代价高昂的项目延误和资源浪费。 RLHF 需要一个昂贵的三阶段流程，包括独立的奖励模型和 PPO 训练，容易出现奖励作弊和不稳定问题。相比之下，DPO、IPO 和 KTO 将过程简化为单...</p>
+    </article>
+    <article class="news-item">
+      <h3><a href="https://gmalandrakis.com/writings/ad-economicum.html" target="_blank">分析“无人经济”的技术与经济可行性</a></h3>
+      <p class="content">一篇新的分析文章探讨了完全自动化、由 AI 驱动的“无人经济”在技术和经济上是否可行。它研究了这种范式转变将对人类劳动和经济结构产生的深远影响。 随着人工智能和自动化技术的快速发展，理解完全自动化经济的可能性对政策制定者、经济学家和劳动者至关重要。它促使人们重新批判性地思考在没有人类劳动的情况下，价值如何被创造、分配和维持。 这篇文章在 Hacker News 上引发了高度参与的讨论，仅 88 个赞就产生了 156 条评论，表明社区对此有浓厚的兴趣。该分析深入探讨了自动化的理论极限、过渡期以及支持后劳动社会所需的经济模型。</p>
+    </article>
+    <article class="news-item">
+      <h3><a href="https://www.anthropic.com/news/claude-corps" target="_blank">Anthropic 推出面向非营利组织的 Claude Corps 奖学金项目</a></h3>
+      <p class="content">Anthropic 宣布推出 Claude Corps，这是一个与非营利组织 CodePath 合作开发的全新奖学金项目。该计划将早期职业科技人才与使命驱动的非营利组织联系起来，帮助他们利用 AI 的变革力量。 这一举措凸显了 AI 实验室日益关注社会影响和劳动力发展，而不仅仅是企业软件的趋势。它旨在为非营利部门普及 AI 应用，同时为进入科技行业的第一代和低收入学生提供实际的、以使命为导向的经验。 该项目特别与总部位于旧金山的非营利组织 CodePath 合作，该组织致力于帮助第一代和低收入学生进入科技行业。参与者可以申请成为直接与非营利组织合作...</p>
+    </article>
+    <article class="news-item">
+      <h3><a href="https://kobzol.github.io/rust/2026/06/15/how-memory-safety-cves-differ-between-rust-and-c-cpp.html" target="_blank">Rust 与 C/C++内存安全 CVE 的实证分析</a></h3>
+      <p class="content">一项新的实证研究分析并比较了 Rust 与 C/C++代码库中内存安全通用漏洞和暴露（CVE）的特征，以量化其实际的安全优势。 随着科技行业日益提倡使用内存安全语言来减少关键软件缺陷，这项数据驱动的分析提供了具体的证据，说明与传统的 C/C++代码相比 Rust 如何缓解这些问题，从而帮助组织做出明智的采用决策。 该研究特别关注内存安全 CVE 的特征和差异，而不仅仅是统计漏洞总数，从而细致地展示了不同语言范式在现实场景中如何处理内存错误。</p>
+    </article>
+    <article class="news-item">
+      <h3><a href="https://nick.zoic.org/art/boot-naked-linux/" target="_blank">无需引导加载程序在裸机上直接启动 Linux</a></h3>
+      <p class="content">一篇新的技术深度文章探讨了如何在不依赖 GRUB 等传统引导加载程序的情况下，直接在裸机硬件上启动 Linux 内核。文章详细介绍了将控制权直接转移给内核所需的具体步骤和协议。 了解裸机启动过程为操作系统内部机制和 Linux 启动协议提供了宝贵的见解，这对于系统程序员和编写自定义引导加载程序的开发人员至关重要。它揭示了通常被标准工具抽象掉的操作系统初始化的初始阶段。 该探讨强调了 Linux 启动协议的严格要求，包括在跳转到内核入口点之前如何正确设置 CPU 状态、内存和初始内存盘（initramfs）。它作为绕过中间引导加载程序层的实用指南。</p>
+    </article>
+    <article class="news-item">
+      <h3><a href="https://notnotp.com/notes/what-job-interviews-taught-me-about-kubernetes/" target="_blank">从 Kubernetes 面试中获得的洞察与反思</a></h3>
+      <p class="content">一位作者发布了一篇反思性博客文章，分享了其在 Kubernetes 求职面试中的实际见解，强调了云原生生态系统中理论知识与实际期望之间的巨大差距。 这篇文章之所以重要，是因为它引发了关于 Kubernetes 面试文化和招聘期望的重要讨论，为在云原生就业市场中摸索的 DevOps 和平台工程师提供了宝贵的职业见解。 该文章在 Hacker News 上引发了极高的关注度，以 86 分获得了 76 条评论，表明社区对 Kubernetes 招聘实践的复杂性和现状有着浓厚的兴趣。</p>
     </article>
   </main>
 
   <footer>
-    <div class="info">精选 23/76 条新闻</div>
-    <div>Powered by <a href="https://github.com/xiaoxiehang/Horizon">Horizon</a> · AI-Driven News Aggregation</div>
+    <div>Powered by <a href="https://github.com/xiaoxiehang/Horizon">Horizon</a></div>
   </footer>
 </body>
 </html>

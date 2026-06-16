@@ -8,36 +8,41 @@ def parse_markdown(md_file):
     """Parse Horizon markdown summary into structured data."""
     content = Path(md_file).read_text(encoding='utf-8')
     
+    # Detect language
+    is_zh = '每日速递' in content or '已分析' in content
+    
     # Extract date
-    date_match = re.search(r'# Horizon Daily - (\d{4}-\d{2}-\d{2})', content)
+    if is_zh:
+        date_match = re.search(r'# Horizon 每日速递 - (\d{4}-\d{2}-\d{2})', content)
+    else:
+        date_match = re.search(r'# Horizon Daily - (\d{4}-\d{2}-\d{2})', content)
     date_str = date_match.group(1) if date_match else datetime.now().strftime('%Y-%m-%d')
     
-    # Extract total items
-    total_match = re.search(r'From (\d+) items', content)
-    total_items = int(total_match.group(1)) if total_match else 0
-    
-    # Extract selected items
-    selected_match = re.search(r'(\d+) important content pieces were selected', content)
-    selected_items = int(selected_match.group(1)) if selected_match else 0
-    
-    # Parse news items
+    # Parse news items - support both Chinese and English formats
     items = []
+    
+    # Pattern for Chinese format: ## [标题](url) ⭐️ X.X/10
+    # Followed by content, then source info, then **背景**: or **Tags**:
     item_pattern = re.compile(
         r'<a id="item-\d+"></a>\s*\n'
-        r'## \[(.+?)\]\((.+?)\) ⭐️ ([\d.]+)/10\n\n'
-        r'(.+?)\n\n'
-        r'(rss|hackernews) · (.+?) · (.+?)\n\n'
-        r'\*\*Background\*\*: (.+?)\n\n'
-        r'(?:<details>.*?</details>\n\n)?'
-        r'\*\*Tags\*\*: `(.+?)`',
+        r'## \[(.+?)\]\((.+?)\)(?:\s*⭐️ [\d.]+/10)?\n\n'  # Title and URL (score optional)
+        r'(.+?)\n\n'  # Summary
+        r'(?:rss|hackernews) · .+? · .+?'  # Source info line
+        r'(?:\s*·\s*\[社区讨论\]\(.+?\))?\n\n'  # Optional community discussion link
+        r'(?:\*\*背景\*\*: (.+?)\n\n)?'  # Optional background
+        r'(?:<details>.*?</details>\n\n)?'  # Optional details
+        r'(?:\*\*社区讨论\*\*: .+?\n\n)?'  # Optional community discussion
+        r'(?:\*\*标签\*\*: `.+?`|\*\*Tags\*\*: `.+?`)',  # Tags (Chinese or English)
         re.DOTALL
     )
     
     for match in item_pattern.finditer(content):
-        title, url, score, summary, source_type, source_name, time_str, background, tags_str = match.groups()
+        title, url, summary, background = match.groups()
         
-        # Extract tags
-        tags = re.findall(r'#(\w[\w\-]*\w|\w+)', tags_str)
+        # Skip if title is mostly English (no Chinese characters)
+        has_chinese = bool(re.search(r'[\u4e00-\u9fff]', title))
+        if not has_chinese:
+            continue
         
         # Clean summary (first paragraph only, max 280 chars)
         summary_clean = summary.split('\n\n')[0].strip()
@@ -47,20 +52,12 @@ def parse_markdown(md_file):
         items.append({
             'title': title,
             'url': url,
-            'score': float(score),
             'summary': summary_clean,
-            'source': source_name,
-            'time': time_str,
-            'tags': tags[:4]
         })
     
-    # Sort by score
-    items.sort(key=lambda x: x['score'], reverse=True)
-    
+    # Sort by score (keep original order now since no score)
     return {
         'date': date_str,
-        'total_items': total_items,
-        'selected_items': selected_items,
         'items': items
     }
 
@@ -71,11 +68,6 @@ def build_html(data, output_file):
     for item in data['items']:
         item_html = f'''    <article class="news-item">
       <h3><a href="{item['url']}" target="_blank">{item['title']}</a></h3>
-      <div class="meta">
-        <span class="score">⭐️ {item['score']}</span>
-        <span class="source">{item['source']}</span>
-        <span class="time">{item['time']}</span>
-      </div>
       <p class="content">{item['summary']}</p>
     </article>'''
         items_html.append(item_html)
@@ -88,7 +80,7 @@ def build_html(data, output_file):
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Horizon Daily</title>
+  <title>Horizon 每日速递</title>
   <style>
     * {{ margin: 0; padding: 0; box-sizing: border-box; }}
     body {{
@@ -143,21 +135,6 @@ def build_html(data, output_file):
     .news-item h3 a:hover {{
       color: #0070f3;
     }}
-    .meta {{
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-size: 0.8em;
-      color: #888;
-      margin-bottom: 10px;
-    }}
-    .meta .score {{
-      color: #0070f3;
-      font-weight: 500;
-    }}
-    .meta .source {{
-      color: #666;
-    }}
     .content {{
       color: #555;
       font-size: 0.9em;
@@ -170,9 +147,6 @@ def build_html(data, output_file):
       color: #999;
       font-size: 0.8em;
     }}
-    footer .info {{
-      margin-bottom: 8px;
-    }}
     footer a {{
       color: #666;
       text-decoration: none;
@@ -184,7 +158,7 @@ def build_html(data, output_file):
 </head>
 <body>
   <header>
-    <h1>Horizon Daily</h1>
+    <h1>Horizon 每日速递</h1>
     <div class="date">{data['date']}</div>
   </header>
 
@@ -193,8 +167,7 @@ def build_html(data, output_file):
   </main>
 
   <footer>
-    <div class="info">精选 {data['selected_items']}/{data['total_items']} 条新闻</div>
-    <div>Powered by <a href="https://github.com/xiaoxiehang/Horizon">Horizon</a> · AI-Driven News Aggregation</div>
+    <div>Powered by <a href="https://github.com/xiaoxiehang/Horizon">Horizon</a></div>
   </footer>
 </body>
 </html>'''
@@ -203,16 +176,20 @@ def build_html(data, output_file):
     Path(output_file).write_text(html, encoding='utf-8')
     print(f'✅ Generated: {output_file}')
     print(f"   Date: {data['date']}")
-    print(f"   Items: {data['selected_items']}/{data['total_items']}")
+    print(f"   Items: {len(data['items'])}")
 
 def main():
-    # Find latest summary file
+    # Find latest summary file (prefer Chinese)
     summaries_dir = Path('data/summaries')
     if not summaries_dir.exists():
         print('❌ No summaries directory found')
         return
     
-    summary_files = sorted(summaries_dir.glob('horizon-*-en.md'), reverse=True)
+    # First try Chinese summary
+    summary_files = sorted(summaries_dir.glob('horizon-*-zh.md'), reverse=True)
+    if not summary_files:
+        # Fall back to English
+        summary_files = sorted(summaries_dir.glob('horizon-*-en.md'), reverse=True)
     if not summary_files:
         print('❌ No summary files found')
         return
