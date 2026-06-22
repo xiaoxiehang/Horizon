@@ -159,7 +159,12 @@ class AnthropicClient(AIClient):
                 input_tokens=getattr(usage, "input_tokens", 0),
                 output_tokens=getattr(usage, "output_tokens", 0),
             )
-        return message.content[0].text
+        # Extract text from content, skipping ThinkingBlock
+        text_content = []
+        for block in message.content:
+            if hasattr(block, 'text'):
+                text_content.append(block.text)
+        return "\n".join(text_content) if text_content else ""
 
 
 class OpenAIClient(AIClient):
