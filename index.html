@@ -82,33 +82,25 @@
 <body>
   <header>
     <h1>Horizon 每日速递</h1>
-    <div class="date">2026-06-21</div>
+    <div class="date">2026-06-22</div>
   </header>
 
   <main class="news-list">
     <article class="news-item">
-      <h3><a href="https://sandimetz.com/blog/2016/1/20/the-wrong-abstraction" target="_blank">Sandy Metz 经典文章：宁要重复代码，不要错误抽象</a></h3>
-      <p class="content">Sandy Metz 在 2016 年发表的一篇极具影响力的文章指出，开发者宁愿选择代码重复，也不应创建和维护有缺陷或过早的抽象。该文章强调了与错误抽象的隐性成本相比，重复代码的显性成本其实更低。 这一观点挑战了对 DRY 原则的盲目遵守，提醒工程师过早的抽象会导致代码库紧密耦合且缺乏灵活性。它鼓励采用更务实的重构方法，将清晰独立的代码置于强制复用之上。 该文章区分了重复代码的成本（可见且局部）与错误抽象的成本（不可见且影响系统中多个不相关的部分）。它指出，只有当重复代码违反单一事实来源原则并在代码分歧时引发缺陷时，重复才是一个关键问题。</p>
+      <h3><a href="https://support.claude.com/en/articles/14328960-identity-verification-on-claude" target="_blank">Anthropic 对顶级 Claude 模型实施身份验证</a></h3>
+      <p class="content">Anthropic 现要求用户提供政府颁发的身份证明以访问其顶级 Claude 模型，此举引发了广泛的社区争议。 AI 行业向严格的身份验证协议转变，凸显了 AI 普及、用户隐私与合规监管之间日益加剧的矛盾。这也可能因新的访问壁垒促使国际用户转向非美国的 AI 替代方案。 验证过程由名为 Persona 的第三方服务处理，该服务可能会使用提交的数据来改进其自身的防欺诈模型。此外，在 OpenAI 等平台上验证失败的用户可能会被永久锁定，且无法重试。</p>
     </article>
     <article class="news-item">
-      <h3><a href="https://support.claude.com/en/articles/14328960-identity-verification-on-claude" target="_blank">Anthropic 对 Claude 实施强制身份验证</a></h3>
-      <p class="content">Anthropic 目前要求用户通过第三方服务 Persona 进行强制身份验证，以访问 Claude 的高级模型。这一政策引发了社区对隐私、数据使用和可用性的广泛反对。 这一转变凸显了 AI 安全监管与用户隐私之间日益加剧的矛盾，可能会因可用性和数据问题促使国际用户转向其他替代模型。它也为 AI 公司如何处理用户身份识别和账户封禁树立了先例。 身份验证由名为 Persona 的第三方处理，该第三方保留使用提交的数据来改进其自身防欺诈模型的权利。此外，验证失败的用户将被永久锁定，无法访问顶级模型且无法重试。</p>
+      <h3><a href="https://www.wired.com/story/a-critical-deadline-is-approaching-for-windows-and-linux-security/" target="_blank">Windows 和 Linux 面临 Secure Boot 密钥过期的关键截止日期</a></h3>
+      <p class="content">用于保护 Windows 和 Linux 系统 UEFI Secure Boot 启动过程的加密密钥和证书将于 6 月 24 日到期。这需要供应商提供关键的固件和操作系统更新，以维持启动功能和安全性。 Secure Boot 是一项基础安全功能，可防止在系统启动过程中加载未经授权或恶意的代码。如果这些密钥过期且系统未更新，设备可能会面临启动失败，或容易受到 bootkit 和其他底层恶意软件的攻击。 即将过期的证书最初于 2011 年左右颁发，被微软用于签署 Secure Boot 组件和第三方 Linux 引导加载程序。系统管理员和 IT 专业人...</p>
     </article>
     <article class="news-item">
-      <h3><a href="https://norvig.com/lispy.html" target="_blank">Peter Norvig 经典的 Python 编写 Lisp 解释器教程</a></h3>
-      <p class="content">Peter Norvig 于 2010 年发表的关于使用 Python 构建 Lisp 解释器的经典教程再次在 Hacker News 上引发热议，延续了其作为编程语言实现基础指南的地位。 该教程仍然是希望了解编程语言和解释器内部原理的开发者的极佳入门起点。其持久的受欢迎程度凸显了业界对通俗易懂、注重实践的语言设计与实现资源的持续需求。 该教程详细讲解了如何使用 Python 构建名为 Lispy 的极简 Lisp 解释器，并常被推荐与 Robert Nystrom 的 Crafting Interpreters 结合学习。社区成员还强调了 Nor...</p>
+      <h3><a href="https://alexkritchevsky.com/2026/05/25/everything-is-logarithms.html" target="_blank">一篇探讨对数普遍性与深层性质的数学散文</a></h3>
+      <p class="content">一篇新发表的数学散文探讨了对数在各个数学领域中的基本性质和普遍应用。它在读者中引发了关于复分析和李理论等高级概念的深刻技术讨论。 虽然缺乏直接的软件工程应用，但这篇散文通过强调单一数学概念如何统一数学的不同领域，提供了重要的思想深度。对于希望理解高等数学中深刻结构联系的数学爱好者来说，它是一份宝贵的资源。 社区讨论强调了在定义对数时指定定义域和值域的必要性，并将其与分贝等物理测量中需要参考点进行了类比。评论者还建立了复对数、Z-扭子（Z-torsors）以及向量空间中基的选择之间的复杂联系。</p>
     </article>
     <article class="news-item">
-      <h3><a href="https://www.wired.com/story/a-critical-deadline-is-approaching-for-windows-and-linux-security/" target="_blank">Windows 和 Linux 面临关键的 Secure Boot 密钥过期截止日期</a></h3>
-      <p class="content">通过 Secure Boot 保护 Windows 和 Linux 系统启动序列的加密密钥将于 6 月 24 日开始过期。这一过期事件要求系统管理员和用户立即采取行动更新系统，以防止启动失败或安全漏洞。 如果这些密钥过期而未被更新，系统可能无法启动，或者容易受到 bootkit 和未授权软件的攻击。这会影响所有 Windows 和 Linux 用户，尤其是管理大量设备的企业系统管理员。 此次过期具体影响 UEFI Secure Boot 密钥层次结构中使用的加密证书，这些证书用于验证引导加载程序和操作系统内核的数字签名。管理员必须在截止日期前应用固...</p>
-    </article>
-    <article class="news-item">
-      <h3><a href="https://techcrunch.com/2026/06/21/techcrunch-mobility-a-new-robotaxi-scorecard-shows-chinas-dominance/" target="_blank">新 Robotaxi 记分卡凸显中国主导地位</a></h3>
-      <p class="content">TechCrunch Mobility 简报中发布的一项新 Robotaxi 记分卡显示，中国已在自动驾驶汽车行业中确立了领先地位。 这一进展凸显了全球自动驾驶汽车格局的重大转变，表明中国企业在 Robotaxi 部署和技术方面正在超越国际竞争对手。 由于简报介绍非常简短，新记分卡的具体指标和评估方法并未详细说明，这限制了读者立即获取的技术深度。</p>
-    </article>
-    <article class="news-item">
-      <h3><a href="https://techcrunch.com/2026/06/21/when-the-trump-administration-cracks-down-on-anthropic-who-benefits/" target="_blank">特朗普政府对 Anthropic 的监管打压及其对 AI 生态的影响</a></h3>
-      <p class="content">TechCrunch 的 Equity 播客分析了特朗普政府近期对 AI 实验室 Anthropic 的监管打压，探讨了其背后的触发因素以及哪些行业参与者可能从中受益。 这一政府干预凸显了领先 AI 公司不断演变的监管环境，这可能会显著改变更广泛 AI 生态系统内的市场动态、竞争优势和战略联盟。 该播客节目主要侧重于此次打压的商业和政策影响，而非 AI 的技术能力，为不断变化的监管环境提供了有价值的行业背景。</p>
+      <h3><a href="https://techcrunch.com/2026/06/21/techcrunch-mobility-a-new-robotaxi-scorecard-shows-chinas-dominance/" target="_blank">新记分卡揭示了中国在全球自动驾驶出租车行业的主导地位。</a></h3>
+      <p class="content">TechCrunch Mobility 简报重点介绍的一份新记分卡显示，中国已在全球自动驾驶出租车（robotaxi）行业中确立了领先地位。这一评估凸显了与世界其他地区相比，中国在自动驾驶技术快速发展和部署方面的进展。 中国在自动驾驶出租车领域的主导地位标志着全球自动驾驶交通格局的重大转变，这可能会加速国际市场的采用并树立新的行业标准。它突显了中国科技公司在人工智能应用和大规模出行部署方面所具备的竞争优势。 提供的文本仅为简报的引言，缺乏实际记分卡的具体指标、方法论或详细数据。读者需要查阅完整的 TechCrunch Mobility 报告，才能了...</p>
     </article>
   </main>
 
