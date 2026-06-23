@@ -1,173 +1,185 @@
 {
-  "version": "1.0",
-  "ai": {
-    "provider": "anthropic",
-    "base_url": "https://coding.dashscope.aliyuncs.com/apps/anthropic",
-    "model": "qwen3.7-plus",
-    "api_key_env": "ANTHROPIC_API_KEY",
-    "temperature": 0.3,
-    "max_tokens": 4096,
-    "throttle_sec": 0,
-    "analysis_concurrency": 5,
-    "enrichment_concurrency": 5,
-    "languages": [
-      "zh"
-    ]
-  },
-  "email": {
-    "enabled": false,
-    "smtp_server": "",
-    "smtp_port": 465,
-    "imap_server": "",
-    "imap_port": 993,
-    "email_address": "",
-    "sender_name": "Horizon Daily",
-    "subscribe_keyword": "SUBSCRIBE",
-    "unsubscribe_keyword": "UNSUBSCRIBE"
-  },
-  "sources": {
-    "github": [
-      {
-        "type": "repo_releases",
-        "owner": "astral-sh",
-        "repo": "uv",
-        "enabled": true
-      }
-    ],
-    "hackernews": {
-      "enabled": true,
-      "fetch_top_stories": 5,
-      "min_score": 100
+    "version": "1.0",
+    "ai": {
+        "provider": "anthropic",
+        "base_url": "https://coding.dashscope.aliyuncs.com/apps/anthropic",
+        "model": "qwen3.7-plus",
+        "api_key_env": "ANTHROPIC_API_KEY",
+        "temperature": 0.3,
+        "max_tokens": 4096,
+        "throttle_sec": 0,
+        "analysis_concurrency": 5,
+        "enrichment_concurrency": 5,
+        "languages": [
+            "zh"
+        ]
     },
-    "rss": [
-      {
-        "name": "IT之家",
-        "url": "https://www.ithome.com/rss/",
-        "enabled": true,
-        "category": "tech-cn",
-        "max_items": 5
-      },
-      {
-        "name": "爱范儿",
-        "url": "https://www.ifanr.com/feed",
-        "enabled": true,
-        "category": "tech-cn",
-        "max_items": 5
-      },
-      {
-        "name": "少数派",
-        "url": "https://sspai.com/feed",
-        "enabled": true,
-        "category": "tech-cn",
-        "max_items": 5
-      },
-      {
-        "name": "钛媒体",
-        "url": "https://www.tmtpost.com/rss",
-        "enabled": true,
-        "category": "tech-cn",
-        "max_items": 5
-      },
-      {
-        "name": "机器之心",
-        "url": "https://www.jiqizhixin.com/rss",
-        "enabled": true,
-        "category": "tech-cn",
-        "max_items": 5
-      },
-      {
-        "name": "TechCrunch",
-        "url": "https://techcrunch.com/feed/",
-        "enabled": true,
-        "category": "tech",
-        "max_items": 5
-      },
-      {
-        "name": "The Verge",
-        "url": "https://www.theverge.com/rss/index.xml",
-        "enabled": true,
-        "category": "tech",
-        "max_items": 5
-      },
-      {
-        "name": "Wired",
-        "url": "https://www.wired.com/feed/rss",
-        "enabled": true,
-        "category": "tech",
-        "max_items": 5
-      },
-      {
-        "name": "Ars Technica",
-        "url": "http://feeds.arstechnica.com/arstechnica/index",
-        "enabled": true,
-        "category": "tech",
-        "max_items": 5
-      },
-      {
-        "name": "VentureBeat",
-        "url": "https://venturebeat.com/feed/",
-        "enabled": true,
-        "category": "tech",
-        "max_items": 5
-      },
-      {
-        "name": "9to5Mac",
-        "url": "https://9to5mac.com/feed/",
-        "enabled": true,
-        "category": "tech",
-        "max_items": 5
-      },
-      {
-        "name": "ZDNet",
-        "url": "https://www.zdnet.com/news/rss.xml",
-        "enabled": true,
-        "category": "tech",
-        "max_items": 5
-      },
-      {
-        "name": "OpenAI",
-        "url": "https://openai.com/blog/rss.xml",
-        "enabled": true,
-        "category": "ai",
-        "max_items": 3
-      },
-      {
-        "name": "Google DeepMind",
-        "url": "https://deepmind.google/blog/rss.xml",
-        "enabled": true,
-        "category": "ai",
-        "max_items": 3
-      }
-    ],
-    "reddit": {
-      "enabled": false
+    "email": {
+        "enabled": false,
+        "smtp_server": "",
+        "smtp_port": 465,
+        "imap_server": "",
+        "imap_port": 993,
+        "email_address": "",
+        "sender_name": "Horizon Daily",
+        "subscribe_keyword": "SUBSCRIBE",
+        "unsubscribe_keyword": "UNSUBSCRIBE"
     },
-    "twitter": {
-      "enabled": false
+    "sources": {
+        "github": [
+            {
+                "type": "repo_releases",
+                "owner": "astral-sh",
+                "repo": "uv",
+                "enabled": true
+            }
+        ],
+        "hackernews": {
+            "enabled": true,
+            "fetch_top_stories": 5,
+            "min_score": 100
+        },
+        "rss": [
+            {
+                "name": "IT之家",
+                "url": "https://www.ithome.com/rss/",
+                "enabled": true,
+                "category": "tech-cn",
+                "max_items": 5
+            },
+            {
+                "name": "爱范儿",
+                "url": "https://www.ifanr.com/feed",
+                "enabled": true,
+                "category": "tech-cn",
+                "max_items": 5
+            },
+            {
+                "name": "少数派",
+                "url": "https://sspai.com/feed",
+                "enabled": true,
+                "category": "tech-cn",
+                "max_items": 5
+            },
+            {
+                "name": "钛媒体",
+                "url": "https://www.tmtpost.com/rss",
+                "enabled": true,
+                "category": "tech-cn",
+                "max_items": 5
+            },
+            {
+                "name": "机器之心",
+                "url": "https://www.jiqizhixin.com/rss",
+                "enabled": true,
+                "category": "tech-cn",
+                "max_items": 5
+            },
+            {
+                "name": "TechCrunch",
+                "url": "https://techcrunch.com/feed/",
+                "enabled": true,
+                "category": "tech",
+                "max_items": 5
+            },
+            {
+                "name": "The Verge",
+                "url": "https://www.theverge.com/rss/index.xml",
+                "enabled": true,
+                "category": "tech",
+                "max_items": 5
+            },
+            {
+                "name": "Wired",
+                "url": "https://www.wired.com/feed/rss",
+                "enabled": true,
+                "category": "tech",
+                "max_items": 5
+            },
+            {
+                "name": "Ars Technica",
+                "url": "http://feeds.arstechnica.com/arstechnica/index",
+                "enabled": true,
+                "category": "tech",
+                "max_items": 5
+            },
+            {
+                "name": "VentureBeat",
+                "url": "https://venturebeat.com/feed/",
+                "enabled": true,
+                "category": "tech",
+                "max_items": 5
+            },
+            {
+                "name": "9to5Mac",
+                "url": "https://9to5mac.com/feed/",
+                "enabled": true,
+                "category": "tech",
+                "max_items": 5
+            },
+            {
+                "name": "ZDNet",
+                "url": "https://www.zdnet.com/news/rss.xml",
+                "enabled": true,
+                "category": "tech",
+                "max_items": 5
+            },
+            {
+                "name": "OpenAI",
+                "url": "https://openai.com/blog/rss.xml",
+                "enabled": true,
+                "category": "ai",
+                "max_items": 3
+            },
+            {
+                "name": "Google DeepMind",
+                "url": "https://deepmind.google/blog/rss.xml",
+                "enabled": true,
+                "category": "ai",
+                "max_items": 3
+            }
+        ],
+        "reddit": {
+            "enabled": false
+        },
+        "twitter": {
+            "enabled": false
+        }
+    },
+    "filtering": {
+        "ai_score_threshold": 6.0,
+        "time_window_hours": 24,
+        "max_items": null,
+        "timeout_seconds": 1200
+    },
+    "webhook": {
+        "enabled": true,
+        "url_env": "DINGTALK_WEBHOOK_URL",
+        "delivery": "summary",
+        "overview_position": "first",
+        "platform": "dingtalk",
+        "layout": "markdown",
+        "fallback_layout": "markdown",
+        "languages": [
+            "zh"
+        ],
+        "max_items": 20,
+        "request_body": {
+            "msgtype": "markdown",
+            "markdown": {
+                "title": "发布 | Horizon 每日速递 #{date}",
+                "text": "## 发布 | Horizon 每日速递 - #{date}\n\n#{news_list}\n\n---\n\n[🔗 查看完整日报](https://xiaoxiehang.github.io/Horizon/)"
+            }
+        }
+    },
+    "ui": {
+        "title": "Horizon",
+        "primary_color": "#1a73e8",
+        "background_color": "#f8f9fa",
+        "text_color": "#202124",
+        "accent_color": "#fbbc04",
+        "font_family": "Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif",
+        "layout": "compact",
+        "dark_mode": "auto"
     }
-  },
-  "filtering": {
-    "ai_score_threshold": 6.0,
-    "time_window_hours": 24,
-    "max_items": null,
-    "timeout_seconds": 1200
-  },
-  "webhook": {
-    "enabled": true,
-    "url_env": "DINGTALK_WEBHOOK_URL",
-    "delivery": "summary",
-    "overview_position": "first",
-    "platform": "dingtalk",
-    "max_items": 20
-  },
-  "ui": {
-    "title": "Horizon",
-    "primary_color": "#1a73e8",
-    "background_color": "#f8f9fa",
-    "text_color": "#202124",
-    "accent_color": "#fbbc04",
-    "font_family": "Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif",
-    "layout": "compact",
-    "dark_mode": "auto"
-  }
 }
