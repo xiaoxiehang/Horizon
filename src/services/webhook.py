@@ -437,6 +437,28 @@ class WebhookNotifier:
             "headers": redact_headers(headers),
         }
 
+    def _generate_title_list(self, summary: str, lang: str) -> str:
+        """从完整摘要中提取精简标题列表（只保留标题，不带评分和锚点）"""
+        import re
+        lines = summary.split('\n')
+        title_lines = []
+        
+        for line in lines:
+            # 匹配新闻标题格式：1. [标题](#item-1) ⭐️ 9.0/10
+            match = re.match(r'^\d+\.\s+\[(.+?)\]\(#item-\d+\)', line)
+            if match:
+                title = match.group(1)
+                # 提取序号
+                num_match = re.match(r'^(\d+)\.', line)
+                num = num_match.group(1) if num_match else ''
+                title_lines.append(f"{num}. {title}")
+                
+                # 最多保留20条
+                if len(title_lines) >= 20:
+                    break
+        
+        return '\n'.join(title_lines) if title_lines else summary
+
     def build_daily_summary_messages(
         self,
         summary: str,
@@ -532,6 +554,9 @@ class WebhookNotifier:
 
             return [overview_message] + item_messages
 
+        # 生成精简新闻列表（只保留标题，不带评分和锚点）
+        title_list = self._generate_title_list(summary, lang)
+        
         return [
             {
                 **base_vars,
@@ -539,7 +564,7 @@ class WebhookNotifier:
                     f"Horizon {date} 日报" if lang == "zh" else f"Horizon {date} Daily"
                 ),
                 "message_kind": "summary",
-                "summary": summary,
+                "summary": title_list,
             }
         ]
 

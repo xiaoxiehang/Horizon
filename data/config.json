@@ -167,8 +167,8 @@
         "request_body": {
             "msgtype": "markdown",
             "markdown": {
-                "title": "发布 | Horizon 每日速递 #{date}",
-                "text": "## 发布 | Horizon 每日速递 - #{date}\n\n#{news_list}\n\n---\n\n[🔗 查看完整日报](https://xiaoxiehang.github.io/Horizon/)"
+                "title": "Horizon 每日速递 #{date}",
+                "text": "## Horizon 每日速递 - #{date}\n\n#{summary}\n\n---\n\n[🔗 查看完整日报](https://xiaoxiehang.github.io/Horizon/)"
             }
         }
     },
