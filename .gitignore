@@ -44,9 +44,9 @@ data/subscribers.json
 data/mcp.secrets.json
 data/mcp-secrets.json
 data/mcp-runs/
-data/x_cookies_*.json
-
-docs/_posts/*.md
+# 允许追踪摘要文件用于部署
+# data/summaries/*.md
+# docs/_posts/*.md
 
 # Logs
 logs/*.log
