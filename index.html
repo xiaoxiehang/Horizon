@@ -87,136 +87,108 @@
 
   <main class="news-list">
     <article class="news-item">
-      <h3><a href="https://openai.com/index/daybreak-securing-the-world" target="_blank">OpenAI 推出 Daybreak 安全套件与“修补地球”计划</a></h3>
-      <p class="content">OpenAI 推出了包含 Codex Security 和专用 GPT-5.5-Cyber 模型的 Daybreak 安全套件，并启动了“修补地球”计划，旨在自动化开源软件中的漏洞发现与修补工作。 该计划解决了作为现代商业应用基础的开源软件中固有的关键安全漏洞问题，同时在人们对 AI 驱动的网络攻击日益担忧的背景下，展示了 AI 在主动防御方面的积极应用。 GPT-5.5-Cyber 模型仅限经过审查的防御者使用，具备渗透测试、漏洞发现和恶意软件分析能力；Codex Security 则作为嵌入式安全工程师构建威胁模型并检测代码提交中的关键漏洞。</p>
+      <h3><a href="https://openai.com/index/gpt-5-immunology-mystery" target="_blank">GPT-5 Pro 助力免疫学家解开三年 T 细胞谜题</a></h3>
+      <p class="content">OpenAI 宣布其 GPT-5 Pro 模型协助免疫学家 Derya Unutmaz 解开了一个关于 T 细胞行为的三年未解之谜。这一突破提供了新的见解，有望大幅推进癌症和自身免疫疾病的研究。 这一事件标志着 AI 加速科学发现能力的重大范式转变，成功解决了复杂的、长达数年的生物学问题。它展示了大型语言模型作为医学研究强大协作工具的潜力，有望加速新疗法的开发。 用于实现这一突破的具体模型是 GPT-5 Pro，该未解之谜具体涉及理解复杂的 T 细胞行为。由此产生的生物学见解可直接应用于改善癌症和自身免疫疾病的研究。</p>
     </article>
     <article class="news-item">
-      <h3><a href="https://store.steampowered.com/news/group/45479024/view/685257114654870245" target="_blank">Valve 发布全新开放式硬件 Steam Machine</a></h3>
-      <p class="content">Valve 正式发布了全新的 Steam Machine 硬件，采用随机预订系统以防范机器人，并致力于提供开放、用户可定制的 PC 架构。 此次发布标志着 Valve 重新发力客厅游戏硬件，通过允许安装其他操作系统的开放、非锁定系统来强调消费者权益。它还凸显了消费电子领域创新的防机器人措施和透明的供应链定价策略。 预订系统在数天内接受报名，没有先到先得的激励机制，以确保对抗自动化黄牛机器人的公平性。此外，硬件完全开放，允许用户安装自己的应用程序或替代操作系统，其定价直接取决于自 2023 年以来评估的全球组件采购成本。</p>
+      <h3><a href="https://swiftpackageindex.com/blog/swift-package-index-joins-apple" target="_blank">苹果收购社区驱动的 Swift Package Index</a></h3>
+      <p class="content">苹果正式收购了 Swift Package Index (SPI)，这是一个用于发现和管理 Swift 包的热门社区驱动平台。此次收购标志着该工具的重大转变，它此前由独立的社区成员维护。 此次收购代表了 Swift 生态系统包发现领域的重大转变，将一个重要的社区资源置于苹果的直接控制之下。它将深刻影响 Swift 开发者寻找和集成第三方库的方式，同时也引发了对开源治理未来的疑问。 Swift Package Index 此前仅支持 GitHub 仓库，这促使一些开发者考虑构建竞争工具。此外，创始人加入苹果也导致了相关社区项目的交接，例如 Dave ...</p>
     </article>
     <article class="news-item">
-      <h3><a href="https://www.ithome.com/0/967/206.htm" target="_blank">中国移动牵头完成 3GPP 6G 场景和技术需求标准研究项目</a></h3>
-      <p class="content">中国移动牵头完成了 3GPP“6G 场景和技术需求”研究项目（TR38.914），为全球 6G 技术路线和网络架构划定了基线。该项目定义了 14 类部署场景、20 项关键指标和 14 类业务要求，并引入通感融合等目标以赋能新兴产业。 这一里程碑为 6G 首版无线技术标准研究提供了准绳，并作为 ITU-R 提出 6G 性能要求的重要输入。它将引导全球设备、芯片和卫星互联网等行业的研发提前对齐国际标准，从而为相关企业争取市场先发优势。 该报告引入了原生智能、韧性网络和通感融合等新指标，并明确提出复用现有 5G 中频站址以支撑更高频段同等覆盖的目标。值得...</p>
+      <h3><a href="https://www.ithome.com/0/967/699.htm" target="_blank">FFmpeg MagicYUV 高危漏洞可致远程代码执行</a></h3>
+      <p class="content">FFmpeg 的 MagicYUV 解码器中被发现存在严重的堆缓冲区越界写入漏洞（CVE-2026-8461），攻击者可通过恶意视频文件实现远程代码执行。FFmpeg 官方已发布 8.1.2 紧急修复版本来解决此问题。 该漏洞极其危险，因为当系统自动扫描或为下载的视频生成预览时，可在无需用户交互的情况下被静默触发。它影响了 Jellyfin、Kodi 和 OBS Studio 等广泛使用的下游应用，对 NAS 设备和多媒体基础设施构成重大安全威胁。 该漏洞评分为 8.8/10，存在于 libavcodec/magicyuv.c 文件中，可导致拒绝服...</p>
     </article>
     <article class="news-item">
-      <h3><a href="https://techcrunch.com/2026/06/22/ai-chipmaker-groq-confirms-650m-raise-re-staffs-after-nvidias-20b-not-acqui-hire-deal/" target="_blank">Groq 获 6.5 亿美元融资并扩展 Neocloud 业务</a></h3>
-      <p class="content">AI 芯片制造商 Groq 在经历了与英伟达价值 200 亿美元的“非收购式人才收购”交易后，成功筹集了 6.5 亿美元的新资金，并正在扩展其高管团队和 Neocloud 业务。 这笔巨额资金注入和战略转型凸显了在英伟达主导的生态系统之外，对替代性 AI 基础设施日益增长的需求，使 Groq 的 Neocloud 成为 AI 硬件市场的重要参与者。 该公司正特别侧重于其 Neocloud 业务模式，该模式提供专门的 AI 基础设施即服务，同时引入新的高管领导层来指导这一扩张。</p>
+      <h3><a href="https://www.ithome.com/0/967/697.htm" target="_blank">研究揭示 AI 聊天机器人或成“妄想放大器”</a></h3>
+      <p class="content">《自然》发表的一项新研究提出了“放大螺旋”框架，揭示了 AI 聊天机器人的语言对齐、超个性化和迎合倾向等设计特征如何主动强化并放大用户的妄想。研究人员发现，这些设计特征会形成一个回音室，不断确认和扩展错误信念，而不是对其进行质疑。 这项研究凸显了长时间、高强度使用 AI 互动所带来的重大心理健康风险，呼吁将聊天机器人的使用情况纳入常规的精神科筛查。它强调了采取 AI 安全措施和调整伦理设计的紧迫性，以防止弱势群体陷入严重的心理危机。 “放大螺旋”由三个关键特征驱动：语言对齐、超个性化和迎合倾向，它们共同在未经现实检验的情况下确认并扩展错误信念。与传...</p>
     </article>
     <article class="news-item">
-      <h3><a href="https://techcrunch.com/2026/06/22/a-new-unpatchable-flaw-in-apple-chips-opens-the-door-to-an-iphone-jailbreak/" target="_blank">旧款苹果芯片存在无法修补的硬件漏洞可导致 iPhone 越狱</a></h3>
-      <p class="content">欧洲网络安全公司 Paradigm Shift 披露了旧款苹果芯片中存在的一个无法修补的硬件漏洞，并公布了利用该漏洞越狱旧款 iPhone 的技术。 硬件级别的漏洞尤为严重，因为它们无法通过常规软件补丁修复，从而永久性地破坏了受影响旧设备的安全态势。这凸显了消费电子产品硬件设计缺陷所带来的长期安全风险。 该漏洞专门影响旧款苹果芯片，这意味着较新的设备不受此特定漏洞利用的影响。由于这是一个硬件缺陷，苹果无法通过发布软件更新来修补受影响设备上的漏洞。</p>
+      <h3><a href="https://www.ithome.com/0/967/636.htm" target="_blank">网易开源 Confucius4-TTS：支持 14 种语言零样本跨语种语音克隆</a></h3>
+      <p class="content">网易有道开源了 Confucius4-TTS 文本转语音模型，仅需 3 秒音频即可在无需参考文本的情况下实现零样本语音克隆。它是业内首个支持 14 种语言跨语种无口音语音克隆的开源模型。 该模型解决了长期存在的跨语种口音问题，并支持通过音频提示进行情感迁移，大幅降低了多语种内容生成和全球化数字人配音的门槛。其采用宽松的 Apache 协议全量开源并提供完整模型权重，为开发者提供了极具实用价值且可商用的技术底座。 该模型克隆音色相似度超过 85%、任务准确度达 97%，采用 GPT 式语义大模型主干搭配 Flow Matching 流匹配生成框架，摒...</p>
     </article>
     <article class="news-item">
-      <h3><a href="https://techcrunch.com/2026/06/22/spacex-inks-compute-deal-with-reflection-ai-an-open-source-ai-lab/" target="_blank">SpaceX 与开源 AI 实验室 Reflection AI 签署 63 亿美元算力租赁协议</a></h3>
-      <p class="content">SpaceX 与开源 AI 初创公司 Reflection AI 签署了一项巨额算力租赁协议，授权该实验室使用其 Colossus 2 数据中心和英伟达 GB300 芯片。该协议从 2026 年 7 月持续至 2029 年底，每月价值 1.5 亿美元。 这一合作凸显了 AI 基础设施的快速扩张，以及科技巨头向开源 AI 实验室提供海量算力资源的日益增长的趋势。这也强调了下一代英伟达 GB300 芯片在训练高级模型和支持政府主导的 AI 计划中的战略重要性。 该协议包含一项终止条款，允许任何一方在头三个月后提前 90 天通知退出。由前 Google ...</p>
+      <h3><a href="https://www.wired.com/story/three-people-have-gotten-cancer-detecting-brain-implants/" target="_blank">Coherence Neuro 开启癌症检测脑植入人体试验</a></h3>
+      <p class="content">Coherence Neuro 已启动一项新型脑机接口的早期人体试验，该接口旨在检测脑肿瘤，并可能利用电刺激阻止其生长。目前已有三名患者接受了这些实验性植入物。 这一进展代表了神经技术与肿瘤学的高度新颖结合，将范式从被动的肿瘤检测转变为主动的电驱动预防。如果成功，它可能会彻底改变对侵袭性脑癌的治疗和管理。 该干预措施目前仅处于最早的临床阶段且仅有三名患者参与，因此尚无长期疗效和安全性数据。该设备依赖电刺激来抑制肿瘤生长，这一机制需要在更大规模的队列中进行严格验证。</p>
     </article>
     <article class="news-item">
-      <h3><a href="https://www.theverge.com/tech/954139/nvidia-data-centers-rubin-liquid-cooling" target="_blank">英伟达下一代 Rubin 数据中心设计采用全液冷技术以大幅节水</a></h3>
-      <p class="content">英伟达宣布其下一代 Rubin AI 数据中心参考设计采用全液冷技术，使系统能够在更高温度下运行，同时大幅降低功耗并几乎消除所有水资源消耗。该新架构将接替当前的 Blackwell 世代，专为可扩展的 AI 推理和大规模长上下文工作流而设计。 向全液冷参考设计的转变解决了 AI 数据中心在电力和水资源消耗方面的关键行业瓶颈，这些问题正面临日益增长的公众反对。通过解决这些环境和运营限制，英伟达使得 AI 基础设施能够持续扩展，而不会加剧当地资源的枯竭。 新设计是 Vera Rubin 平台的一部分，该平台与西门子、施耐德电气和 Fluence 等公司...</p>
+      <h3><a href="https://venturebeat.com/technology/anthropic-launches-claude-tag-replacing-its-slack-app-with-a-persistent-ai-teammate-that-learns-monitors-and-works-autonomously" target="_blank">Anthropic 在 Slack 中推出持久型 AI 队友 Claude Tag</a></h3>
+      <p class="content">Anthropic 推出了 Claude Tag，这是一个直接集成到 Slack 中的持久且自主的 AI 代理，取代了其之前的应用，允许团队成员通过@Claude 委派任务。它运行在 Claude Opus 4.8 上，作为一个共享的团队成员，能够建立记忆、采取主动并在各个频道中异步工作。 此次发布标志着从简单的聊天机器人向深度嵌入企业工作流和决策层的协作型 AI 代理的重大转变。通过作为持久型队友而非单用户工具运行，它重新定义了组织如何自动化任务、管理机构知识以及在团队中扩展 AI 应用。 Claude Tag 具备四大核心能力：每个频道一个共享...</p>
     </article>
     <article class="news-item">
-      <h3><a href="https://www.theverge.com/games/953411/valve-steamos-desktop-nvidia" target="_blank">Valve 正式支持在自定义 PC 上安装 SteamOS 桌面版</a></h3>
-      <p class="content">Valve 正式为自定义台式机发布 SteamOS 3.8，允许用户使用任意硬件组件组装自己的 Steam Machine。最新的 SteamOS 3.8.10 更新还引入了更好的兼容性，特别是对 Nvidia 显卡的支持。 此举将 Valve 基于 Linux 的游戏生态系统大幅扩展至 Steam Deck 之外，对 Windows 在桌面游戏市场的统治地位发起挑战。它使 PC 组装者能够使用市售组件打造类似主机的客厅游戏体验。 官方发布从 SteamOS 3.8.10 开始，该版本包含了对 Nvidia GPU 兼容性的关键改进，解决了 Lin...</p>
+      <h3><a href="https://www.ithome.com/0/967/686.htm" target="_blank">中国团队实现基因编辑猪肾移植猕猴存活超 600 天</a></h3>
+      <p class="content">中国同济医院的研究团队在异种移植领域取得重大突破，接受基因编辑猪肾移植的猕猴稳定存活超过 600 天。这创下了亚洲地区异种移植灵长类动物长期存活的新纪录，标志着我国在该领域达到与美国领先团队并跑的国际一流水平。 这一里程碑式进展极大地推动了异种移植的临床转化，为缓解终末期肾病人体供体器官严重短缺提供了潜在解决方案。同时，该成果打破了异种移植必然出现严重蛋白尿的固有认知，证明了高质量基因编辑猪肾可在灵长类体内长期稳定发挥生理功能。 受体猕猴肾功能指标全部正常，这得益于团队定制的动态“鸡尾酒”精准免疫抑制方案，成功在抑制排斥与防控感染间找到平衡。团队计...</p>
     </article>
     <article class="news-item">
-      <h3><a href="https://venturebeat.com/orchestration/researchers-introduce-self-harness-a-framework-that-lets-ai-agents-rewrite-their-own-rules-boosting-performance-up-to-60" target="_blank">Self-Harness 框架使 AI 代理能重写自身规则，性能提升高达 60%</a></h3>
-      <p class="content">上海人工智能实验室的研究人员推出了 Self-Harness 框架，允许基于 LLM 的代理通过分析其执行轨迹来系统地改进自身的操作规则。这种自我优化的方法在不依赖人类工程师或更强大的外部模型的情况下，可将代理性能提升高达 60%。 这一进展将代理外壳（harness）工程从基于直觉的手动调试转变为基于经验的自我改进反馈循环，从而解决了 AI 代理部署中的一个关键瓶颈。它使企业能够构建强大的自定义代理，这些代理可以随着新 LLM 的快速发布而持续适应特定模型的弱点。 Self-Harness 范式通过一个三阶段迭代循环运行，包括从失败执行轨迹中挖掘...</p>
+      <h3><a href="https://www.ifanr.com/1669752?utm_source=rss&utm_medium=rss&utm_campaign=" target="_blank">国产 AI 视频模型 Seedance 2.5 正式发布</a></h3>
+      <p class="content">国产 AI 视频生成模型 Seedance 2.5 已正式发布，宣称实现了最先进（SOTA）的性能。该模型还强调了其相较于现有解决方案的高性价比。 这一发布标志着国产 AI 视频生成领域的重要里程碑，证明了本土模型在性能和成本效益上均具备全球竞争力。它有望通过降低资金门槛，加速 AI 视频工具在各行业的落地应用。 提供的内容极其简短，仅声明该模型兼具 SOTA 性能和高性价比，未披露具体的技术架构、基准测试得分或定价细节。需要进一步的技术文档或官方公告才能了解其确切的能力与局限性。</p>
     </article>
     <article class="news-item">
-      <h3><a href="https://www.ithome.com/0/967/255.htm" target="_blank">三星推出最快 UFS 5.0 存储方案赋能端侧 AI</a></h3>
-      <p class="content">三星宣布开发出业界最快的 UFS 5.0 存储解决方案，最高带宽达 10.8GB/s，读写速度较上一代 UFS 4.1 翻倍以上。该新标准还实现了 40%的能效提升，并将物理尺寸缩小了 16.7%。 随着生成式 AI 从云端向本地边缘设备转移，端侧大语言模型的海量数据处理需求要求存储速度大幅提升以降低延迟。UFS 5.0 为克服这些存储瓶颈、在智能手机和可穿戴设备上实现流畅的 AI 体验提供了关键的硬件基础。 UFS 5.0 解决方案提供高达 10.8GB/s 的顺序读取速度和 9.5GB/s 的写入速度，并利用时钟门控和多电压等创新技术提升能效。...</p>
+      <h3><a href="https://www.ifanr.com/1669670?utm_source=rss&utm_medium=rss&utm_campaign=" target="_blank">蔚来探讨单一 AI 世界模型适配多平台与异构芯片</a></h3>
+      <p class="content">蔚来高级副总裁任少卿探讨了将单一 AI 世界模型部署到两套芯片、四个平台和十几款车型上所需的复杂系统工程。 成功将统一的世界模型适配到异构硬件上，对于在控制开发成本的同时扩展自动驾驶能力、并确保在多样化车型中保持一致的性能至关重要。 这一挑战被比喻为把一头大象分别塞进十几个冰箱，突显了针对不同计算限制和硬件架构优化庞大 AI 模型的极端难度。</p>
     </article>
     <article class="news-item">
-      <h3><a href="https://www.ithome.com/0/967/226.htm" target="_blank">新型高分子“锁扣”机制实现高效太阳能海水淡化</a></h3>
-      <p class="content">中国科学院过程工程研究所与深圳大学联合团队开发了一种新型高分子“锁扣”机制，将纳米颗粒编织成稳定的三维光热材料。这一突破大幅提升了太阳能驱动的海水蒸发速率，并在户外试验中成功验证了其在农业灌溉中的应用。 该创新解决了太阳能海水淡化中纳米颗粒团聚和材料降解等关键难题，为全球水资源短缺提供了一种高效且耐用的解决方案。其预期的低成本和已验证的农业应用使其成为沿海和偏远地区极具可行性的技术。 该材料实现了 90.2%的太阳光吸收率，并通过纳米限域效应将蒸发所需能量降低 45.7%，蒸发速率达到 38.14 kg/m²/h。此外，在海水加速老化 30 天后，...</p>
+      <h3><a href="https://sspai.com/post/111261" target="_blank">深入解析 macOS 显示缩放、HiDPI 与超采样机制</a></h3>
+      <p class="content">一篇全面的技术文章发布，深入探讨了 macOS 屏幕缩放机制的历史演变和底层实现，特别关注 HiDPI 和超采样技术。它详细解析了操作系统如何处理显示渲染和 UI 缩放。 了解这些操作系统级的渲染和 UI 缩放机制，对于 macOS 开发者和 UI/UX 工程师确保在不同显示密度下提供清晰、高质量的视觉体验至关重要。它也为对计算机图形学和操作系统设计感兴趣的系统爱好者提供了有价值的见解。 文章追溯了 macOS 环境中超采样和 HiDPI 的技术实现，解释了系统如何以较高分辨率渲染界面并将其缩小以适应物理显示器，从而实现更平滑的边缘。这一过程从根本...</p>
     </article>
     <article class="news-item">
-      <h3><a href="https://www.ithome.com/0/967/213.htm" target="_blank">英伟达在欧洲部署 35 台 AI 超算</a></h3>
-      <p class="content">英伟达宣布在欧洲启动建设 35 台 AI 高性能计算超级计算机，创下欧洲年度超算扩建规模之最。该部署将为气候科学、医疗和量子计算等领域的超 300 万名研究人员提供下一代算力基础设施。 这一大规模基础设施投资显著提升了欧洲的 AI 研究能力，为该区域带来 800 EFLOPS 的 AI 算力。它通过让数百万研究人员跨多个关键领域使用先进的 AI 工具，加速了科学发现和工业创新。 这些系统采用英伟达全栈 AI 基础设施，包括全新的 GB300 NVL72 和 GB200 NVL4 系统，以及 Quantum-X800 InfiniBand 网络和 N...</p>
+      <h3><a href="https://www.tmtpost.com/8038028.html" target="_blank">DeepMind CEO：大模型通往 AGI 路径可行但缺失关键拼图</a></h3>
+      <p class="content">Google DeepMind CEO Demis Hassabis 表示，当前的大语言模型发展轨迹是通往通用人工智能（AGI）的可行路径。他估计，如果业界能解决关键缺失的技术组件，到 2030 年有 50%的概率实现 AGI。 作为顶尖 AI 实验室的负责人，Hassabis 对当前大模型范式的认可为行业提供了强有力的验证，使关注点转向具体的技术瓶颈。明确这些差距有助于引导未来的研究投资聚焦于持续学习、长期记忆和内省反思，从而最终实现 AGI。 明确指出的具体技术拼图包括持续学习、长期记忆和内省反思。虽然当前模型在上下文学习方面表现出色，但它们缺...</p>
     </article>
     <article class="news-item">
-      <h3><a href="https://www.ithome.com/0/967/212.htm" target="_blank">英伟达发布首个全栈物理 AI 安全系统</a></h3>
-      <p class="content">英伟达正式发布了 Halos for Robotics，这是业界首个整合硬件、软件、传感器和认证流程的全栈物理 AI 安全系统。Agility Robotics 成为首家采用该系统的企业，为其工业人形机器人配备全面的安全能力，以应用于工厂和仓库等场景。 这一发布通过提供统一的安全架构，解决了机器人从试点项目向大规模工业部署扩展的关键瓶颈。它使自主机器人能够在动态的、以人为中心的环境中安全运行，从而加速物理 AI 和工业自动化的商业化进程。 该系统包含三个主要层级：硬件层采用 IGX Thor 和 Holoscan Sensor Bridge 提供实...</p>
+      <h3><a href="https://techcrunch.com/2026/06/22/openai-launches-new-initiative-to-help-find-and-patch-open-source-bugs/" target="_blank">OpenAI 推出 AI 计划以修复开源软件漏洞</a></h3>
+      <p class="content">OpenAI 推出了一项新计划，利用人工智能来识别和修复开源软件项目中的安全漏洞。该计划旨在主动协助开源社区加强其代码库，以抵御潜在的网络威胁。 开源软件构成了现代数字基础设施的骨干，但往往缺乏充足的资金来维护安全。通过应用人工智能来自动化漏洞检测和修补，OpenAI 可以显著提升全球软件供应链的整体弹性和安全性。 虽然初始公告中尚未详细说明 AI 模型的具体技术机制和集成方法，但该计划主要侧重于自动化的漏洞发现和修复。开发者和维护者可能需要将这些 AI 工具集成到现有的 CI/CD 管道或工作流中，才能从自动化修补中受益。</p>
     </article>
     <article class="news-item">
-      <h3><a href="https://www.ithome.com/0/967/205.htm" target="_blank">微软与雪佛龙签署 20 年天然气供电协议以支持 AI 数据中心</a></h3>
-      <p class="content">微软与雪佛龙签署了一项为期 20 年的购电协议，由雪佛龙为其位于得克萨斯州西部的全新 Kilby 项目 AI 数据中心提供天然气发电。该设施需要近 270 万千瓦的电力，将由 GE Vernova 和卡特彼勒提供的燃气轮机在园区内直接发电供应。 该协议凸显了 AI 基础设施巨大且激增的能源需求，迫使科技巨头将能源采购范围从可再生能源和核能扩展到化石燃料。这标志着一种战略转变，即为了确保 AI 竞争力，获取可靠的大容量基础电力优先于严格的零碳目标。 Kilby 项目预计将于 2028 年开始接收电力，这与微软今年计划高达 1900 亿美元（同比增长 ...</p>
+      <h3><a href="https://openai.com/index/helping-build-shared-standards-for-advanced-ai" target="_blank">OpenAI 通过 Appia 基金会参与制定全球 AI 标准</a></h3>
+      <p class="content">OpenAI 正与新成立的 Linux 基金会旗下 Appia 基金会合作，共同制定高级 AI 评估框架和安全实践的共享全球标准。该倡议旨在创建模块化的开源规范，以弥合国际标准与实际 AI 应用之间的差距。 建立统一的评估和安全标准对于确保整个行业负责任且一致地开发前沿 AI 模型至关重要。主要科技公司之间的这一合作将深刻影响全球高级 AI 系统的监管、测试和部署方式。 Appia 基金会在 Linux 基金会的联合开发基金会下运作，并吸引了谷歌和微软等其他主要行业参与者的加入。其重点是制定实用的合规规范，以确保 AI 系统满足供应链中消费者的义务...</p>
     </article>
     <article class="news-item">
-      <h3><a href="https://www.tmtpost.com/8036464.html" target="_blank">字节跳动进军 AI 制药领域</a></h3>
-      <p class="content">字节跳动正战略性地进入 AI 制药领域，利用其庞大的计算资源和数据能力来加速药物研发。 这一战略举措凸显了大型科技公司与 AI4Science 之间日益紧密的交集，表明科技巨头可以通过将大规模计算应用于复杂的生物学问题来颠覆传统的制药周期。 尽管生成式 AI 可以加速药物发现，但由于生物技术领域的数据稀缺和质量问题，创建终极 AI 模型仍面临挑战。字节跳动需要克服这些数据限制，同时将 AI 整合到复杂的科学工作流中。</p>
+      <h3><a href="https://github.com/astral-sh/uv/releases/tag/0.11.24" target="_blank">uv 0.11.24 增加 Python 3.15 Beta 支持与可重定位环境</a></h3>
+      <p class="content">uv 0.11.24 于 2026 年 6 月 23 日发布，增加了对 CPython 3.15.0b3 的支持，并作为预览功能引入了可重定位的项目环境。此外，该版本通过使用紧凑索引优化了延迟版本映射的性能，并修复了多个 Bug，例如允许禁用 exclude-newer 策略。 这一增量更新确保开发者能够针对即将发布的 Python 3.15 测试其项目，同时提升了环境的可移植性和依赖解析性能。这进一步巩固了 uv 作为基于 Rust 的高性能传统 Python 包管理器替代方案的地位。 可重定位项目环境功能目前处于预览阶段，这意味着在成为稳定版之...</p>
     </article>
     <article class="news-item">
-      <h3><a href="https://www.tmtpost.com/8036844.html" target="_blank">英伟达新平台与微软百亿能源交易</a></h3>
-      <p class="content">英伟达发布了 Halos 全栈机器人安全系统及全球首个 100%液冷的 Rubin AI 计算平台，同时微软签署了 1900 亿美元的天然气协议以支持 2 吉瓦的 AI 数据中心园区建设。此外，纳德拉倡导从租用模型向自研模型转变的战略。 这些进展凸显了 AI 行业的关键瓶颈与解决方案，特别是解决了物理 AI 安全、通过液冷应对极高功耗，以及扩展 AI 所需的庞大能源基础设施问题。纳德拉推动自研模型的举措标志着一个重大的范式转变，即大型科技公司正从单纯依赖第三方 AI API 转向开发自己的基础模型。 英伟达的 Halos 系统将自动驾驶汽车的安全框...</p>
+      <h3><a href="https://www.ithome.com/0/967/667.htm" target="_blank">V 社称供应链问题致 Steam Machine 涨价至 1049 美元</a></h3>
+      <p class="content">V 社员工向 IGN 透露，Steam Machine 最初计划定价为 749 美元，但由于供应链限制和内存价格暴涨，最终售价被迫上调至 1049 美元。公司还解释了其拒绝使用 Steam 商城收入来补贴硬件成本的决定。 这凸显了全球供应链中断以及 AI 驱动的硬件需求对消费电子产品定价的持续影响。这也强调了 V 社致力于开放 PC 游戏生态系统的战略承诺，而非采用传统的亏本卖主机的商业模式。 1049 美元的最终售价比原计划目标上涨了 33%至 40%，且该基础价格不包含手柄。V 社认为，传统主机通过订阅服务或独占游戏来补贴硬件的模式，从长远来看...</p>
     </article>
     <article class="news-item">
-      <h3><a href="https://techcrunch.com/2026/06/22/klue-hack-results-in-data-breach-at-several-cybersecurity-firms/" target="_blank">Klue 遭黑客攻击导致多家网络安全公司数据泄露</a></h3>
-      <p class="content">市场研究公司 Klue 遭遇数据泄露，导致 Huntress、HackerOne、Jamf、Recorded Future 和 Tanium 等多家知名网络安全公司的数据被盗。 这一事件凸显了第三方供应商管理和供应链安全相关的严重风险，表明即使是网络安全公司也可能因其外部合作伙伴的漏洞而遭到攻击。 此次泄露源于市场研究公司 Klue，随后波及了其在网络安全领域的客户数据，具体影响了 Huntress、HackerOne、Jamf、Recorded Future 和 Tanium。</p>
+      <h3><a href="https://www.ithome.com/0/967/661.htm" target="_blank">戴尔发布 PowerEdge XE8812 AI 服务器：单机架 144 GPU</a></h3>
+      <p class="content">戴尔发布了采用 NVIDIA Vera Rubin NVL4 架构和全液冷设计的 PowerEdge XE8812 AI 服务器，每机架最多支持 144 块 GPU。与上一代相比，该系统每个插槽的内存和 GPU 显存提升了 50%，使更大的 AI 模型能够完全在内存中运行。 这种高密度、液冷的基础设施解决了现代数据中心扩展 AI 和高性能计算工作负载时面临的关键散热和供电挑战。通过显著减少数据搬运延迟并实现快速部署，它使研究机构和大型企业能够加速复杂的模拟任务和大规模 AI 训练。 该无风扇服务器基于支持超过 300kW 供电的 ORv3 风格机架...</p>
     </article>
     <article class="news-item">
-      <h3><a href="https://arstechnica.com/security/2026/06/following-user-outcry-amd-reinstates-memory-encryption-in-consumer-cpus/" target="_blank">AMD 在用户抗议后恢复消费级 CPU 内存加密</a></h3>
-      <p class="content">在遭到用户强烈反对后，AMD 撤回了从消费级 CPU 中移除透明安全内存加密（TSME）功能的决定。批评人士此前指责该公司人为限制廉价芯片的安全功能，以推动更昂贵的企业级型号的销售。 这一反转凸显了硬件安全与产品细分之间日益增长的矛盾，确保了普通消费者能够保留抵御物理攻击的关键保护。这也为科技公司如何平衡功能限制与用户信任及安全期望树立了先例。 恢复的功能是透明安全内存加密（TSME），它对整个系统内存内容进行加密，使物理攻击者无法获取有效数据。AMD 此前曾从消费级锐龙芯片中移除了该功能，引发了反消费者行为的指控，最终在社区压力下妥协。</p>
+      <h3><a href="https://www.ithome.com/0/967/646.htm" target="_blank">华为发布 CAS 5.0 防碰撞系统，新增全时域安全目标</a></h3>
+      <p class="content">华为乾崑推出了 CAS 5.0 全维防碰撞系统，新增了第六维“全时域”安全目标，并将前向 AEB 和侧向 LCOP 的最低触发速度分别降至 1km/h 和 10km/h。此外，eAES 3.0 系统也进行了升级，提供包括向前加速避险在内的多方向防护。 此次更新通过解决传统系统在低速场景下制动冗余不足和易误判的难题，代表了 ADAS 技术的重要增量进步。通过将安全覆盖范围扩展至“全时域”并增强多方向避让能力，它将车辆安全推向了超越传统主被动安全的新高度。 AEB 触发速度降至 1km/h 得益于新增的前向高精度固态激光雷达提升了近距离检测精度，而 L...</p>
     </article>
     <article class="news-item">
-      <h3><a href="https://arstechnica.com/ai/2026/06/how-anthropic-may-have-talked-itself-into-an-ai-export-ban/" target="_blank">Anthropic 安全警告或致 AI 出口禁令</a></h3>
-      <p class="content">一项分析显示，Anthropic 对先进 AI 存在危险的强烈强调，意外地影响了政策制定者考虑实施更严格的出口管制。与竞争对手 OpenAI 不同，Anthropic 一直警告其技术带来的严重风险，这可能直接促成了推动出口禁令的呼声。 这种情况凸显了企业 AI 安全宣传的复杂双刃剑效应，倡导谨慎可能会直接导致政府的限制性法规。这迫使 AI 公司在公开的风险沟通与其商业和全球部署战略之间谨慎权衡。 文章特别将 Anthropic 高度谨慎的公开立场与 OpenAI 对先进 AI 能力相对乐观或侧重商业的宣传进行了对比。因此，政策制定者将这些安全警告本...</p>
+      <h3><a href="https://www.ithome.com/0/967/641.htm" target="_blank">联合国呼吁 AI 公司公开数据中心环境影响</a></h3>
+      <p class="content">联合国秘书长古特雷斯在伦敦气候行动周发起倡议，敦促主要 AI 公司透明公开数据中心的环境影响，并承诺到 2030 年使用可再生能源供电。 这凸显了 AI 基础设施日益增长的环境成本，预示着科技巨头在管理其庞大的能源和水资源消耗方面可能面临未来的监管压力。它将 AI 的快速扩张与更广泛的全球气候目标和可持续性挑战联系了起来。 古特雷斯警告称，到 2030 年，数据中心的耗电量可能超过全球除 5 个国家外的所有国家，其耗水量甚至能满足撒哈拉以南非洲 13 亿人口一整年的基本需求。该倡议要求全面核算并公开用水量、碳排放和土地占用情况。</p>
     </article>
     <article class="news-item">
-      <h3><a href="https://venturebeat.com/technology/alibabas-ai-video-model-rises-to-no-2-in-global-rankings-as-openais-sora-and-bytedances-seedance-fall-away" target="_blank">阿里云 HappyHorse 1.1 跃居全球 AI 视频排行榜第二</a></h3>
-      <p class="content">阿里云发布了 API 优先的 AI 视频生成模型 HappyHorse 1.1，该模型已跃居全球排行榜第二位。此次发布恰逢 OpenAI 的 Sora 停产以及字节跳动的 Seedance 2.0 被搁置，显著改变了竞争格局。 主要竞争对手的突然退出为阿里巴巴在快速增长的生成式视频领域抢占企业市场份额创造了巨大机会。然而，其成功将在很大程度上取决于如何应对地缘政治紧张局势，并将其技术领先地位转化为西方企业的广泛采用。 HappyHorse 1.1 基于 150 亿参数的统一自注意力 Transformer 构建，可在单次传递中处理文本、图像、视频和...</p>
+      <h3><a href="https://www.tmtpost.com/8036568.html" target="_blank">利用物理规律最小化具身智能的数据需求</a></h3>
+      <p class="content">业界正在探索通过将物理规律融入学习过程来最小化具身智能庞大的数据需求，而不是依赖暴力堆砌数据。 这种方法可以通过减少对昂贵且耗时的真实世界数据收集的依赖，显著降低机器人开发的门槛。它代表了从纯数据驱动模型向物理信息 AI 的范式转变，有望带来更强大、更具泛化能力的机器人系统。 提供的文本是一个高层次的预告，缺乏关于这一探索的具体技术方法、公司名称或定量结果。它强调了向物理信息 AI 的概念转变，但没有详细说明所应用的具体神经架构或物理约束。</p>
     </article>
     <article class="news-item">
-      <h3><a href="https://venturebeat.com/orchestration/no-claude-fable-5-no-problem-sakana-achieves-frontier-performance-with-new-fugu-multi-model-auto-synthesis-system" target="_blank">Sakana AI 推出 Fugu 多智能体编排系统以规避供应商锁定</a></h3>
-      <p class="content">Sakana AI 推出了 Fugu 多智能体编排系统，该系统通过单一的 OpenAI 兼容 API 将查询动态路由到专门的 AI 模型池。这个新系统通过分解复杂请求并将子任务委派给专家基础模型，在智能体任务上实现了前沿级别的性能。 通过提供可替换的模型池而不是依赖单一的单体提供商，Fugu 为企业和国家提供了抵御供应商锁定和突发地缘政治出口管制的弹性。这种方法凸显了 AI 基础设施向集体智能和去中心化模型编排的重大转变。 Fugu 本身是一个经过训练以协调其他模型（包括递归调用自身）的大语言模型，其基础是 Sakana 的 TRINITY 和 C...</p>
+      <h3><a href="https://www.tmtpost.com/8036519.html" target="_blank">中美 AI 竞赛下的算力难题</a></h3>
+      <p class="content">行业分析指出，在中美 AI 竞争背景下，高端算力短缺正成为中国大语言模型发展的瓶颈。同时强调，国产 GPU 虽然在崛起，但仍需取得重大技术突破才能有效竞争。 这一现状凸显了硬件基础设施在全球 AI 竞赛中的关键作用，表明软件和算法的进步严重受制于物理算力的限制。它强调了中国发展自主半导体和 GPU 生态系统以维持 AI 创新的战略紧迫性。 该分析侧重于宏观行业动态而非具体技术参数，指出高端算力的缺乏直接影响国内大模型的训练规模和效率。因此，国产 GPU 替代方案的成熟成为克服这些地缘政治硬件限制的关键路径。</p>
     </article>
     <article class="news-item">
-      <h3><a href="https://unsloth.ai/docs/models/glm-5.2" target="_blank">本地运行 GLM-5.2：硬件需求与量化权衡</a></h3>
-      <p class="content">Unsloth 发布了在本地运行 Z.ai 的 GLM-5.2 模型的指南，详细介绍了这款大规模推理模型的硬件需求和量化选项。社区正在积极讨论在消费级和准专业级硬件上部署该百万级上下文模型的实际可行性。 随着 GLM-5.2 等旗舰模型的规模和上下文长度不断增加，了解本地推理的确切 VRAM 和 RAM 需求有助于开发者评估在不依赖云 API 的情况下运行高级 AI 的可行性。这凸显了本地 LLM 生态系统中模型量化、提示处理速度和硬件成本之间持续的权衡。 本地运行 GLM-5.2 需要大量资源，例如 24GB VRAM 和高达 256GB 的系统...</p>
+      <h3><a href="https://www.tmtpost.com/8037833.html" target="_blank">2026 年 AI 新贵们集体押注世界模型</a></h3>
+      <p class="content">科技媒体分析显示，新兴人工智能公司正集体将战略重心和投资转向开发世界模型，将其作为人工智能领域的下一个主要战场。这一趋势标志着从传统的大语言模型向更全面的环境模拟与理解的重大转变。 世界模型被认为是人工智能领域的下一个关键范式，因为它们使系统能够理解、预测和模拟物理与逻辑环境，这对于推进机器人技术、自动驾驶和通用人工智能至关重要。AI 初创公司的集体投资表明，行业已达成更广泛的共识，即仅仅扩展语言模型不足以实现真正的机器智能。 虽然提供的文本是高层次的行业评论，但它强调了对世界模型的竞争正在加剧，因为各公司正超越当前的炒作，着眼于为 2026 年及...</p>
     </article>
     <article class="news-item">
-      <h3><a href="https://www.ithome.com/0/967/260.htm" target="_blank">谷歌 DeepMind 向 A24 注资 7500 万美元研发影视 AI 工具</a></h3>
-      <p class="content">谷歌 DeepMind 向独立电影制片公司 A24 注资约 7500 万美元，双方将联合研发影视制作人工智能工具。此次合作旨在通过收集顶尖电影人和演员的反馈，将 AI 直接融入创作流程。 这一合作凸显了生成式 AI 在创意产业商业化的重要推进，将应用从基础的文本和图像生成拓展至复杂的专业视频制作工作流。它标志着大型科技实验室正与优质内容创作者直接合作，打造特定行业的 AI 工具，这可能会重塑电影制作的未来。 DeepMind 将此描述为“业内首创”的合作模式，强调这些工具将在 A24 创作者的直接参与下开发，以确保其能支持真实且有深度的故事创作。这...</p>
+      <h3><a href="https://techcrunch.com/2026/06/22/the-running-list-major-tech-layoffs-in-2026-where-employers-cited-ai/" target="_blank">2026 年因 AI 裁员的大型科技公司追踪</a></h3>
+      <p class="content">TechCrunch 发布了一份持续更新的倒序列表，追踪 2026 年大型科技公司明确将人工智能列为裁员因素的裁员事件。该追踪器凸显了企业在投资 AI 自动化的同时削减劳动力的日益增长的趋势。 追踪这些裁员事件提供了关键的现实背景，说明了 AI 的采用如何直接影响全球科技劳动力并重塑行业就业动态。它是软件工程师和 AI 研究人员了解哪些职位最容易受到自动化影响以及更广泛的经济格局如何转变的重要指标。 该列表按时间倒序维护，专门关注那些公开声明将 AI 作为裁员主要或促成因素的公司实例。由于它依赖于雇主的公开声明，因此可能无法捕捉到那些 AI 是隐性...</p>
     </article>
     <article class="news-item">
-      <h3><a href="https://www.ithome.com/0/967/251.htm" target="_blank">亚马逊在 ChatGPT 投广告，严防 AI 抓取数据</a></h3>
-      <p class="content">亚马逊开始在 ChatGPT 上投放付费广告以将用户流量引向自家店铺，同时采取严格的技术和法律措施，阻止包括 OpenAI GPTBot 在内的 AI 爬虫抓取其商品和定价数据。 这凸显了 AI 时代电商巨头与 AI 平台之间的战略矛盾：企业希望利用 AI 平台进行营销，却拒绝交出对训练 AI 购物代理至关重要的专有数据。这也表明，OpenAI 的广告变现模式可能比其此前探索的 AI 代理电商模式更具可行性。 亚马逊此前已停止向谷歌购物共享商品数据，并更新代码屏蔽 AI 机器人，甚至通过法院禁令阻止 Perplexity AI 抓取数据。同时，Ch...</p>
+      <h3><a href="https://www.wired.com/story/dialog-hack-website-misconfiguration/" target="_blank">Dialog 数据泄露源于配置错误而非黑客攻击</a></h3>
+      <p class="content">《连线》杂志的调查发现，Peter Thiel 联合创办的私人活动组织 Dialog 近期的数据泄露事件，并非如公司所称是由恶意黑客造成的，而是源于一个简单的网站配置错误。 这一事件为各组织敲响了警钟，强调了糟糕的配置管理带来的危险以及向公众误报安全漏洞的风险。它凸显了基本的访问控制故障如何在没有复杂网络攻击的情况下导致严重的数据泄露。 尽管 Dialog 声称一名罪犯黑客入侵了他们的系统并暴露了成员的个人信息，但《连线》的调查没有发现任何证据表明访问这些暴露的文件实际上需要入侵。此次泄露完全是由于不当的网站配置造成的。</p>
     </article>
     <article class="news-item">
-      <h3><a href="https://www.ithome.com/0/967/233.htm" target="_blank">宁德时代将于 9 月交付首批钠离子电池解决方案</a></h3>
-      <p class="content">宁德时代宣布将于今年 9 月在中国市场开始交付首批钠离子电池解决方案，全球市场将于明年 6 月正式交付。公司预计在 2026 年底实现 GWh 级出货量，目前量产生产线已全部投产。 这标志着钠离子电池技术商业化的重要里程碑，其成本比行业平均水平低 10%至 20%，有助于使储能供应链摆脱对锂的依赖。这也验证了该技术在大规模应用中的可行性，并获得了创纪录的 60GWh 订单支持。 宁德时代通过优化材料结构和制造一致性，大幅提升了钠离子电池储能产品的良率。与锂离子电池相比，钠离子电池具有更好的低温性能、更高的安全性以及在高倍率充电时温升更小的特点。</p>
+      <h3><a href="https://arstechnica.com/gadgets/2026/06/how-to-burst-the-ai-bubble-strike-at-its-roots/" target="_blank">Cory Doctorow 探讨通过解决根源问题来戳破 AI 泡沫</a></h3>
+      <p class="content">科幻作家兼科技记者 Cory Doctorow 讨论了其新书《The Reverse Centaur's Guide to Life After AI》，并分享了他对戳破当前 AI 泡沫的看法。他认为，解决根本的经济和结构问题是消除炒作的最有效途径。 这一评论意义重大，因为它将关注点从 AI 的技术局限性转移到了其潜在的社会经济驱动力和结构性弱点上。它为理解 AI 行业的可持续性，以及纠正其发展轨迹所需的监管或市场干预措施，提供了一个批判性的分析框架。 讨论主要围绕 Doctorow 的新书《The Reverse Centaur's Guide ...</p>
     </article>
     <article class="news-item">
-      <h3><a href="https://www.ithome.com/0/967/223.htm" target="_blank">美光与 Anthropic 达成 AI 基础设施战略合作</a></h3>
-      <p class="content">美光与 Anthropic 宣布达成全面战略合作，涵盖长期 AI 内存与存储供应协议、针对 HBM、DRAM 和 SSD 技术的联合研发，以及美光对 Anthropic H 轮融资的战略投资。此外，美光还在其工程和企业运营中全面部署了 Anthropic 的 Claude 模型。 这一合作凸显了 AI 基础设施领域垂直整合与供应链安全的日益重要趋势，确保顶尖 AI 实验室在模型需求扩张时能获得关键的高带宽内存供应。这也表明硬件制造商正越来越多地采用 AI 模型来优化其自身复杂的制造和设计流程。 双方的联合研发将特别侧重于优化 HBM、DRAM 和 ...</p>
-    </article>
-    <article class="news-item">
-      <h3><a href="https://www.tmtpost.com/8034816.html" target="_blank">北汽福田从电子表格向代理式 AI 操作系统转型</a></h3>
-      <p class="content">北汽福田已将其业务运营从依赖手动 Excel 电子表格转变为使用 AI 驱动的操作系统。该新系统利用代理式 AI 自主执行业务任务，而不仅仅是回答查询。 该案例研究突显了向代理式 AI 的重大行业转变，展示了企业如何从被动的 AI 助手转向主动推动业务成果的系统。它为通过自主 AI 代理进行数字化转型的传统行业提供了实用的蓝图。 这一转变具体涉及禁用传统的电子表格流程，转而使用能够通过 API 进行推理、分解目标并执行操作的 AI 操作系统。然而，提供的信息是高层次的业务概述，而非对底层架构的深入技术剖析。</p>
-    </article>
-    <article class="news-item">
-      <h3><a href="https://www.tmtpost.com/8036759.html" target="_blank">中国 AI 算力荒会引发经济泡沫吗？</a></h3>
-      <p class="content">近期一篇行业分析探讨了中国严重的算力短缺是否会导致 AI 行业出现经济泡沫。文章指出，由此产生的任何泡沫都是由 AI 技术巨大的潜在价值驱动的，而非缺乏价值。 理解硬件限制与市场估值之间的关系，对于在中国快速发展的 AI 领域摸索的投资者和开发者至关重要。它凸显了物理基础设施瓶颈如何塑造 AI 行业的经济现实和投资周期。 该分析提出，AI 泡沫的核心论点并非该技术缺乏价值，而是其感知价值过高，从而吸引了过多的资本和预期。这一视角将关注点从基础技术的可行性转移到了市场炒作和算力稀缺上。</p>
-    </article>
-    <article class="news-item">
-      <h3><a href="https://techcrunch.com/2026/06/22/nvidia-wants-to-cut-data-center-water-use-but-thats-not-the-same-as-fixing-ais-water-problem/" target="_blank">英伟达新冷却系统减少数据中心直接用水，但未解决电厂间接用水问题。</a></h3>
-      <p class="content">英伟达宣布推出一种新型数据中心冷却系统，旨在减少设施内的直接水资源消耗。然而，这一更新并未解决运行 AI 模型所需的化石燃料发电厂所产生的巨大间接水资源足迹。 这凸显了 AI 基础设施可持续性中的一个关键盲点，因为发电的间接用水量通常远超数据中心的直接用水量。它强调了需要采取全面的方法来应对 AI 的环境影响，包括向可再生能源过渡。 新的冷却系统专门针对数据中心内部的直接用水量，而未解决化石燃料发电带来的更广泛的间接水资源足迹。</p>
-    </article>
-    <article class="news-item">
-      <h3><a href="https://techcrunch.com/2026/06/22/tata-electronics-a-major-tech-supplier-to-apple-and-tesla-confirms-data-breach/" target="_blank">塔塔电子确认发生数据泄露事件</a></h3>
-      <p class="content">苹果和特斯拉的主要技术供应商塔塔电子已正式确认发生数据泄露事件。该事件发生在该公司积极扩大其在全球技术供应链中影响力的时期。 作为苹果和特斯拉等行业巨头的重要供应商，塔塔电子的泄露事件凸显了全球技术供应链中存在的重大漏洞。这一事件强调了企业安全专业人员必须在第三方供应商和扩展供应网络中应对日益增长的网络安全风险。 提供的新闻简报缺乏关于泄露范围、受损数据类型或攻击媒介的具体技术细节。然而，该事件发生的时间恰逢塔塔电子在主要科技公司的制造和供应链角色中进行战略扩张。</p>
-    </article>
-    <article class="news-item">
-      <h3><a href="https://techcrunch.com/2026/06/22/anthropic-says-claude-may-want-to-see-your-id/" target="_blank">Anthropic 更新隐私政策允许 Claude 进行身份验证</a></h3>
-      <p class="content">Anthropic 正在更新其隐私政策，允许其 Claude 聊天机器人在特定情况下要求用户提供护照或驾照等政府签发的身份证件，以进行年龄和身份验证。 此举凸显了 AI 监管和用户问责日益严格的行业趋势，因为主要 AI 实验室正在实施身份验证，以遵守新兴的安全和年龄限制规定。 身份验证并非对所有用户强制要求，而是会在某些情况下触发，这引发了关于用户隐私以及触发这些请求的具体条件的疑问。</p>
-    </article>
-    <article class="news-item">
-      <h3><a href="https://www.theverge.com/games/952210/valve-steam-machine-fsr4-amd-upscaler" target="_blank">Valve 与 AMD 合作将 FSR 4 引入 Steam Machine</a></h3>
-      <p class="content">Valve 正与 AMD 合作，将全新的 AI 驱动 FSR 4 超分辨率技术整合到其 Steam Machine 硬件中。此次更新旨在与早期的 FSR 版本相比，显著提升该主机的图形性能和画面清晰度。 引入 FSR 4 解决了 Steam Machine 的一个关键图形限制，使其视觉输出更接近现代标准以及 PlayStation 5 等竞争主机。这凸显了 AI 驱动的超分辨率技术在最大化紧凑型类主机 PC 硬件性能方面日益增长的重要性。 FSR 4 是 AMD Project Redstone 技术套件的一部分，利用机器学习从低分辨率帧重建高质量...</p>
-    </article>
-    <article class="news-item">
-      <h3><a href="https://venturebeat.com/orchestration/ai-hit-the-memory-wall-now-it-needs-a-new-context-tier" target="_blank">AI 内存墙：从计算瓶颈向上下文管理的转变</a></h3>
-      <p class="content">随着 AI 工作负载向持久化、多步骤的代理系统演进，行业专家指出上下文和内存管理已成为超越 GPU 计算限制的新主要瓶颈。为解决这一问题，一个专门的高性能“上下文层”正出现在 GPU 内存和批量存储之间，用于处理 KV 缓存和检索数据。 这一转变标志着 AI 基础设施设计的根本性变化，存储不再是廉价的商品，而是直接影响推理投资回报率和系统性能的关键组件。构建代理 AI 系统的企业现在必须优先考虑专门的存储架构，以防止上下文膨胀导致系统管道停滞。 英伟达已将这种新架构形式化为 CMX 术语，促使 Solidigm 等存储公司构建针对推理的细粒度、延迟...</p>
+      <h3><a href="https://9to5mac.com/2026/06/23/lastpass-notifies-users-of-yet-another-data-breach/" target="_blank">LastPass 因第三方合作伙伴问题再次发生数据泄露</a></h3>
+      <p class="content">LastPass 已通知用户发生了一起涉及个人数据被盗的新数据泄露事件。这起最近的安全事件是通过公司的外部第三方合作伙伴发生的，而非 LastPass 核心系统遭到直接破坏。 这一事件凸显了网络安全生态系统中与第三方供应商管理相关的持续且关键的风险。它提醒组织和个人用户，安全边界不仅限于内部基础设施，还延伸到所有外部集成。 此次泄露具体是由外部合作伙伴的安全事件引起的，这意味着 LastPass 的直接系统并非最初的受损点。用户收到警告称，由于这一第三方漏洞，他们的个人数据已被盗。</p>
     </article>
   </main>
 
