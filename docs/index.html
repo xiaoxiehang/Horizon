@@ -82,81 +82,137 @@
 <body>
   <header>
     <h1>Horizon 每日速递</h1>
-    <div class="date">2026-06-22</div>
+    <div class="date">2026-06-25</div>
   </header>
 
   <main class="news-list">
     <article class="news-item">
-      <h3><a href="https://apertvs.ai/" target="_blank">Apertus 推出完全开放的主权 AI 基础模型</a></h3>
-      <p class="content">Apertus 倡议推出了由瑞士主导的完全开放基础模型 Apertus-70B，该模型在 15 万亿个 token 上训练，旨在满足欧盟《人工智能法案》的合规要求并促进技术主权。 该倡议通过提供优先考虑数据隐私和地区技术独立的透明、开放数据和开放配方替代方案，挑战了商业 AI 实验室的主导地位。它引发了关于开源模型在性能和开发速度上是否真正能与专有巨头竞争的关键辩论。 Apertus-70B 的构建旨在尊重退出选项、移除个人身份信息 (PII) 并防止记忆化，以符合欧盟《人工智能法案》。然而，社区成员指出其当前的指令模型似乎是去年 Llama 3....</p>
+      <h3><a href="https://arstechnica.com/gadgets/2026/06/openai-and-broadcom-announce-chip-designed-for-llm-inference-at-scale/" target="_blank">OpenAI 和 Broadcom 联合发布了 Jalapeno 定制 LLM 推理芯片。</a></h3>
+      <p class="content">OpenAI 与 Broadcom 合作设计了名为 Jalapeno 的定制 AI 芯片，专门针对大语言模型推理进行优化，并实现了从设计到流片仅 9 个月的快速周期。该芯片旨在处理目前为 ChatGPT、Codex 和 OpenAI API 提供支持的推理工作负载。 这一公告标志着 AI 硬件格局的重大转变，OpenAI 开始开发定制硅片，从而减少对 Nvidia 等主导 GPU 供应商的依赖。它凸显了科技巨头设计专用推理芯片以克服内存带宽瓶颈并降低大规模运营成本的日益增长的行业趋势。 Jalapeno 芯片仅用 9 个月时间开发完成，OpenAI...</p>
     </article>
     <article class="news-item">
-      <h3><a href="https://www.ithome.com/0/966/901.htm" target="_blank">郭明錤：谷歌开发 TPU v9 芯片推理优化升级款，联发科接单</a></h3>
-      <p class="content">Analyst Ming-Chi Kuo reports that Google is developing an inference-optimized upgrade to its TPU v9 chip, codenamed 'Triggerfish', featuring increased SRAM, HBM4E memory, and a new 'simulation die', with MediaTek securing the exclusive order.</p>
+      <h3><a href="https://deepmind.google/blog/introducing-computer-use-in-gemini-3-5-flash/" target="_blank">谷歌 DeepMind 为 Gemini 3.5 Flash 引入了计算机使用功能。</a></h3>
+      <p class="content">谷歌 DeepMind 已将计算机使用功能集成到 Gemini 3.5 Flash 模型中，使其能够自主导航并与图形用户界面交互以执行复杂任务。这使得人工智能能够像人类用户一样直接操作软件和网页浏览器，而不仅仅依赖后端 API。 这代表了人工智能代理的重大范式转变，因为它允许模型与任何具有视觉界面的软件进行交互，从而绕过了对自定义 API 集成的需求，使复杂任务自动化变得更加普及。通过将这一功能引入像 Flash 这样快速高效的模型，谷歌正在为高度可扩展且低成本的自主人工智能工作流铺平道路。 计算机使用功能依赖多模态视觉能力来实时解释屏幕元素、点击...</p>
     </article>
     <article class="news-item">
-      <h3><a href="https://www.ithome.com/0/966/776.htm" target="_blank">闪迪新专利：NAND 闪存堆叠于计算芯片下方突破 AI 存储瓶颈</a></h3>
-      <p class="content">闪迪公布了一项新专利（US 12,430,274 B2），提出一种 3D 堆叠架构，将 NAND 闪存裸片直接放置在 GPU 或 AI 加速器等主计算芯片下方。该设计在同一中介层上集成了高带宽闪存（HBF）与传统 HBM，以处理不同的数据工作负载。 该架构通过结合 HBM 处理即时任务的低延迟优势与 NAND 闪存处理大规模数据的大容量优势，解决了当前 HBM 方案的内存墙和容量限制问题。它为未来的 AI 和高性能计算硬件提供了一种极具前景、高带宽且具成本效益的替代方案。 专利详细说明了采用 CMOS 键合阵列（CBA）的存储裸片，将大容量 NAN...</p>
+      <h3><a href="https://www.reuters.com/business/qualcomm-buy-ai-startup-modular-2026-06-24/" target="_blank">高通 40 亿美元收购 AI 初创公司 Modular</a></h3>
+      <p class="content">高通已同意以约 40 亿美元收购由 Chris Lattner 创立的 AI 基础设施初创公司 Modular，以扩展其数据中心 AI 能力。该交易预计将于 2026 年下半年完成，前提是获得监管部门的批准。 此次收购标志着高通的重大战略转变，使其积极超越移动和边缘设备领域，进军高端数据中心 AI 市场参与竞争。它还通过将 Modular 先进的基础设施和 Mojo 编程语言纳入一家主要芯片制造商旗下，整合了 AI 软硬件栈。 Modular 因其 Mojo 编程语言而备受推崇，该语言旨在为 AI 开发提供类似 Python 的语法和 C 语言级别...</p>
     </article>
     <article class="news-item">
-      <h3><a href="https://www.tmtpost.com/8035767.html" target="_blank">AI 应用层的定价权，正在从开发者手里转向平台</a></h3>
-      <p class="content">An analysis of how pricing power in the AI application layer is shifting from independent developers to platform providers, emphasizing that true profitability lies in mastering specific scenarios and user relationships rather than just calling AI models.</p>
+      <h3><a href="https://www.ithome.com/0/968/247.htm" target="_blank">全球最大硼-10 同位素装置在山东投产</a></h3>
+      <p class="content">中国在山东省东营市正式投产了全球最大产能的高丰度硼-10 同位素生产装置。该项目成功打破了国外垄断，实现了这一关键战略材料的国产化自主可控。 这一成就保障了核电和高端医疗等关键领域所需战略材料的国内供应链安全，消除了对进口的依赖。这标志着我国在关键工业领域实现科技自立自强方面迈出了重要一步。 该百吨级装置由上海化工研究院研发，仅用 18 个月就完成了从设计、建设到达产的全流程。目前装置已稳定产出 25 吨合格产品，硼-10 最高丰度达到 99.7%，且仍有进一步提升的空间。</p>
     </article>
     <article class="news-item">
-      <h3><a href="https://www.wired.com/story/a-critical-deadline-is-approaching-for-windows-and-linux-security/" target="_blank">Windows 与 Linux 安全启动密钥面临关键过期期限</a></h3>
-      <p class="content">用于通过 UEFI 安全启动保护 Windows 和 Linux 系统启动序列的加密密钥将于 6 月 24 日开始面临关键的过期期限。系统管理员和用户必须应用必要的更新以防止潜在的启动失败。 如果这些安全启动证书在未更新的情况下过期，系统可能无法启动，或者失去对引导扇区病毒和 Rootkit 的保护。这会影响庞大的 Windows 和 Linux 设备生态系统，需要立即采取管理行动以维护系统完整性。 此次过期具体影响 UEFI 固件身份验证过程中使用的密钥交换密钥（KEK）和数据库密钥。用户可以通过系统信息工具或特定于操作系统的更新机制来验证其安全...</p>
+      <h3><a href="https://www.tmtpost.com/8039400.html" target="_blank">腾讯将 AI Agent 深度整合进微信</a></h3>
+      <p class="content">腾讯首次采取重大举措，将 AI Agent 深度嵌入其拥有十亿用户的国民级应用微信中。这标志着该公司在消费级人工智能战略上的重大转变。 将 AI Agent 整合到微信这样庞大的生态系统中，可能会从根本上改变消费者与数字服务的交互方式，从简单的聊天机器人转向自主任务执行。此举使腾讯处于消费级 AI 竞赛的前沿，并可能重新定义超级应用的模式。 虽然简短的内容中没有详细说明具体的技术实现，但将 Agent 嵌入微信意味着利用其庞大的小程序生态和社交图谱进行上下文感知的自动化。这种整合的成功将很大程度上取决于如何在自主 Agent 能力与用户隐私及平台稳...</p>
     </article>
     <article class="news-item">
-      <h3><a href="https://openai.com/index/samsung-electronics-chatgpt-codex-deployment" target="_blank">三星电子在全球部署 ChatGPT Enterprise 和 Codex</a></h3>
-      <p class="content">三星电子已向其韩国全体员工及全球设备体验（DX）部门部署了 OpenAI 的 ChatGPT Enterprise 和 Codex。此次大规模部署涵盖了软件开发、市场营销、产品开发和制造等广泛职能。 这是 OpenAI 迄今为止最大规模的企业 AI 部署之一，标志着大型全球科技公司在日常运营中整合生成式 AI 的重大转变。它凸显了企业 AI 正从实验性试点向全公司范围普及的生产力工具过渡。 ChatGPT Enterprise 提供数据保护和访问管理等安全的企业级功能，而 Codex 不仅被开发者使用，还被非技术团队用于构建内部工具和自动化工作流。...</p>
+      <h3><a href="https://www.theverge.com/tech/956450/nature-microsoft-quantum-computing-majorana-1-claims" target="_blank">《自然》论文质疑微软 Majorana 1 量子芯片声明</a></h3>
+      <p class="content">发表在《自然》杂志上的一篇新论文对微软于 2025 年 2 月发布的 Majorana 1 拓扑量子计算芯片背后的基础技术和声明提出了质疑。该评论文章质疑了微软誉为重大突破的拓扑量子比特技术的有效性。 这一科学评论意义重大，因为它挑战了微软量子计算战略的核心叙事，可能会影响拓扑量子研究和行业投资的轨迹。它凸显了严格的同行评审过程对纠正重大行业声明的作用，并确保科学界为量子硬件进展保持准确的基准。 微软声称 Majorana 1 是全球首款由拓扑核心驱动的量子处理器，由于其固有的错误保护能力，旨在单芯片上扩展至百万量子比特。《自然》杂志的论文专门针对...</p>
     </article>
     <article class="news-item">
-      <h3><a href="https://tech.slashdot.org/story/26/06/22/028235/tiktok-shows-3x-more-ai-slop-than-youtube-report-finds?utm_source=rss1.0mainlinkanon&utm_medium=feed" target="_blank">报告称 TikTok 推送的 AI 劣质内容是 YouTube 三倍</a></h3>
-      <p class="content">视频创作工具 Kapwing 的一份报告显示，TikTok 的推荐算法向新账号推送的内容中近 59%为 AI 生成的劣质内容，大约是 YouTube 21%比例的三倍。该研究还强调儿童内容受此影响尤为严重，Kids 类别中 57%的视频均为 AI 生成。 这些实证数据凸显了低质量生成式 AI 内容在主流推荐算法中的严重泛滥，引发了对内容审核和平台伦理的严重担忧。这也强调了保护弱势群体（尤其是儿童）免受自动化、低质量内容过度投喂的紧迫性。 依赖视觉插图和旁白的类别（如科学、健康和历史）的 AI 劣质内容比例高达 33-35%，而需要真人出镜的类别（如...</p>
+      <h3><a href="https://www.theverge.com/policy/956296/google-play-app-store-alternative-billing-fee-antitrust" target="_blank">谷歌向 Play 商店开放全球替代计费系统</a></h3>
+      <p class="content">谷歌正在推出全球性改革，允许在 Play 商店中使用替代计费系统，打破了其此前对应用内支付的垄断。该计划将于今年在部分市场率先推出并降低费用，随后在 2027 年进行全球全面推广。 这从根本上改变了移动应用的货币化和平台经济，赋予开发者绕过谷歌强制收取的 30%佣金的自由。这标志着 Epic Games 反垄断诉讼的重大胜利，并为全球应用商店的监管树立了重要先例。 这些改变源于 Epic 诉谷歌反垄断案的和解，尽管法院尚未正式批准这项庞大的协议。开发者将在今年首批市场中享受较低的平台费用，随后在 2027 年完成全球全面推广。</p>
     </article>
     <article class="news-item">
-      <h3><a href="https://yro.slashdot.org/story/26/06/21/1939214/cops-keep-getting-arrested-for-using-flocks-cameras-to-stalk-people?utm_source=rss1.0mainlinkanon&utm_medium=feed" target="_blank">美国警察因滥用 Flock 车牌识别系统跟踪他人被捕</a></h3>
-      <p class="content">多名美国警察因滥用 Flock Safety 自动车牌识别系统的权限跟踪恋爱对象，被捕并被控跟踪罪。报告显示，这些警察在数月或数年内进行了数十至数百次未经授权的查询，且无需搜查令。 这凸显了普遍监控技术在访问控制和监督方面的严重系统性缺陷，证明了执法部门在无需司法搜查令的情况下追踪个人所带来的现实隐私风险。它强调了制定更严格的技术保障措施和监管政策以规范自动车牌识别系统使用的紧迫性。 Flock 声称其内置的审计工具会标记滥用行为，但许多滥用案件实际上是由受害者、记者或第三方数据库 HaveIBeenFlocked.com 发现的，而该公司曾多次试...</p>
+      <h3><a href="https://arstechnica.com/security/2026/06/one-two-punch-delivered-in-global-operation-disrupts-cybercrime-assembly-line/" target="_blank">全球“终局行动”重创网络犯罪基础设施</a></h3>
+      <p class="content">代号为“终局行动”的全球协调执法行动成功摧毁了关键的网络犯罪基础设施，并同时破坏了两款广泛使用的恶意工具。 此次重大行动通过打击网络犯罪集团的核心基础设施和广泛使用的恶意软件工具，显著削弱了其犯罪能力。这凸显了国际合作在打击复杂、大规模网络犯罪行动中日益增强的有效性。 该行动专门针对并破坏了两款广泛使用的犯罪工具，对网络犯罪“流水线”实施了“组合拳”打击。</p>
     </article>
     <article class="news-item">
-      <h3><a href="https://politics.slashdot.org/story/26/06/21/0536219/new-super-pac-aims-to-rally-tech-workers-to-help-limit-ai-the-guardrails-alliance?utm_source=rss1.0mainlinkanon&utm_medium=feed" target="_blank">护栏联盟超级政治行动委员会成立，动员科技工人推动 AI 监管</a></h3>
-      <p class="content">一个名为“护栏联盟”的新超级政治行动委员会以 500 万美元初始资金成立，旨在动员科技工作者和工会倡导更严格的 AI 监管。此外，主要媒体和娱乐公司还成立了另一个名为“艺术与媒体负责任创新联盟”的联盟，以推动围绕 AI 的法律和政策护栏。 这一发展标志着 AI 治理辩论的重大转变，因为科技工作者和创意人士开始组织政治活动，以对抗反监管科技亿万富翁的大规模游说努力。它凸显了行业内部日益增长的分歧，以及要求 AI 发展具备伦理边界和问责制的劳工、媒体和科技专业人士不断扩大的联盟。 “护栏联盟”计划在本周期筹集 1500 万美元，虽然远低于亲行业组织“L...</p>
+      <h3><a href="https://venturebeat.com/orchestration/xiaomis-harnessx-rewrites-its-own-ai-scaffolding-mid-task-and-smaller-models-gain-the-most" target="_blank">小米 HarnessX 使 AI 代理能够自主重写任务脚手架</a></h3>
+      <p class="content">小米研究人员推出了 HarnessX 框架，允许 AI 代理在任务执行过程中自主重写和优化其软件脚手架。通过将脚手架视为可组合的一等对象，该系统无需手动重写代码即可动态适应特定应用需求。 这一进展证明扩大基础模型规模并非提升 AI 能力的唯一途径，因为它显著提升了较小模型的性能。它通过实现静态代理脚手架的自动化、基于执行轨迹的自适应，解决了企业 AI 部署中的一个重大工程瓶颈。 HarnessX 在 15 个模型与基准测试的组合中实现了平均 14.5%的性能提升，其中开放权重的 Qwen3.5-9B 模型在具身规划任务上的提升高达 44%。该框架将...</p>
     </article>
     <article class="news-item">
-      <h3><a href="https://david.newgas.net/did-my-old-job-only-exist-because-of-fraud/" target="_blank">一篇关于科技行业企业欺诈与低效的博客文章及讨论</a></h3>
-      <p class="content">一篇反思性博客文章引发了 Hacker News 上的热烈讨论，获得了 425 个赞和 189 条评论，探讨了关于企业账单欺诈和低效的个人经历。科技专业人士分享了各种轶事，突出了软件工程和政府承包中的道德问题。 此次讨论凸显了科技和承包行业中普遍存在的道德和财务现实，揭示了企业结构如何有意或无意地促成账单欺诈。它提醒软件工程师和承包商必须对雇主的商业行为和财务诚信保持警惕。 社区轶事揭示了具体的欺诈模式，例如外包机构对相同的承包商收取巨额加价、经理篡改计费软件以耗尽政府预算，以及企业资金被浪费在未经审查的项目上。这些故事说明了激进的企业预算与实际法...</p>
+      <h3><a href="https://www.ithome.com/0/968/229.htm" target="_blank">高通获微软与 Meta 订单，预计 2029 年数据中心营收达 150 亿美元</a></h3>
+      <p class="content">高通宣布大举进军数据中心 AI 芯片市场，不仅拿下了微软和 Meta 的订单，还预计到 2029 年该业务营收将达到 150 亿美元。此外，公司还推出了全新的高带宽计算（HBC）架构以及面向云端应用的 Dragonfly C1000 CPU。 这一战略转型通过使用廉价的移动端存储替代昂贵的 HBM 内存，提供了更具成本效益的替代方案，从而对英伟达在 AI 基础设施领域的统治地位发起挑战。这也标志着高通在智能手机芯片业务面临竞争和供应链压力之际，开始向多元化业务进行重大转型。 微软将采用高通全新的高带宽计算（HBC）芯片，该芯片利用 3D 集成技术将...</p>
     </article>
     <article class="news-item">
-      <h3><a href="https://www.marble.onl/posts/cancel_claude.html" target="_blank">转向开源大语言模型的弊端微乎其微</a></h3>
-      <p class="content">一篇观点文章认为，从 Claude 等专有大语言模型转向开源权重模型的实际弊端微乎其微，从而引发了关于隐私和性能的辩论。 这一讨论凸显了开源权重模型在日常任务中日益增长的可行性，同时也暴露了使用第三方 API 路由时的数据隐私隐患，以及基准测试分数与实际效用之间的差距。 作者和评论者指出，虽然开源模型可能相当于几个月前的专有模型，但在现实世界的编码和推理任务中，通常仍倾向于使用顶级专有模型。此外，通过第三方服务路由 API 调用会给机密信息带来重大的数据隐私风险。</p>
+      <h3><a href="https://www.ithome.com/0/968/228.htm" target="_blank">新型 macOS 提权漏洞可禁用企业安全工具</a></h3>
+      <p class="content">安全公司 XM Cyber 披露了一种新型 macOS 攻击技术，该技术滥用特权 XPC 调用，在无需管理员权限或内核漏洞的情况下禁用 CrowdStrike 和 Kandji 等企业安全工具。研究人员计划于 8 月在 Black Hat Arsenal 活动上展示其开源工具 XPC Hunter。 该漏洞凸显了 macOS 企业环境中的重大安全缺口，允许拥有标准用户权限的攻击者绕过关键的终端防护和移动设备管理防御。这强调了需要更严格地验证 XPC 服务通信，以防止未经授权的权限提升。 该攻击利用 macOS 缓存合法应用信任签名的机制，允许攻击者...</p>
     </article>
     <article class="news-item">
-      <h3><a href="https://www.ithome.com/0/966/887.htm" target="_blank">英伟达发布 100%液冷 Rubin AI 基础设施</a></h3>
-      <p class="content">英伟达发布了全新的 Rubin AI 基础设施，该设施采用 100%液冷散热且完全无风扇设计，能够在高达 45℃的冷却液中运行。这种完全无风扇的设计通过闭环系统冷却每一颗芯片和网络组件。 这一进步通过消除传统风扇冷却带来的巨大功耗和噪音，显著提高了数据中心的能源效率和可持续性。它解决了扩展 AI 基础设施的关键挑战，对于 50 兆瓦的设施，每年可节省超过 400 万美元的冷却成本。 该系统使用的冷却液由 75%的水和 25%的丙二醇混合而成，使得在许多气候条件下无需启动机械散热器即可排散热量。此外，行业估计冷却机温度每提高 1℃，制冷能源成本即可降...</p>
+      <h3><a href="https://sspai.com/post/111223" target="_blank">AI 智能体通过 FireWire 自动化数字化旧版 DV/HDV 磁带</a></h3>
+      <p class="content">一个技术项目展示了如何使用现代 AI 智能体通过 FireWire 接口控制 18 年前的 DV/HDV 磁带机，从而实现媒体内容的自动化数字化。这种创新方法将前沿的 AI 技术与过时的旧版硬件结合在一起，以保存老化的物理媒体。 它为创客和复古计算社区提供了一个极具实用性和启发性的解决方案，能够在无需人工干预的情况下数字化磁带。该项目还突显了 AI 智能体在交互和自动化旧版硬件接口方面的多功能性。 该项目利用了旧版的 FireWire（IEEE 1394）接口，该接口在现代电脑上已基本淘汰，通常需要特定的转接器或老式电脑才能连接。AI 智能体自动化...</p>
     </article>
     <article class="news-item">
-      <h3><a href="https://www.ithome.com/0/966/878.htm" target="_blank">SK 海力士市值一度超越三星电子，登顶韩国最具价值企业</a></h3>
-      <p class="content">受 AI 热潮及在高带宽内存（HBM）生产中的主导地位推动，SK 海力士市值于 6 月 22 日一度超越三星电子，终结了三星长达 27 年的韩国市值第一宝座。 这一历史性的市场格局转变凸显了 HBM 在 AI 硬件供应链中的关键作用，并表明专注于 AI 基础设施的供应商能够超越多元化科技巨头。这释放出一个更广泛的行业趋势信号，即 AI 驱动的半导体需求正在从根本上重塑全球市场估值。 SK 海力士市值达到 2090 万亿韩元，超越三星电子的 2088 万亿韩元，其股价在过去一年暴涨超 920%。分析师预计，受 HBM 和服务器 DRAM 需求加速增长...</p>
+      <h3><a href="https://www.tmtpost.com/8039970.html" target="_blank">AI 早报：OpenAI 定制芯片、创纪录融资与 Meta 立场</a></h3>
+      <p class="content">OpenAI 与 Broadcom 联合发布了 Jalapeño 定制推理芯片，实现了 9 个月的快速流片，同时英伟达与 SpaceX 为 AI 基础设施创纪录地发行了 450 亿美元债务。此外，Alphabet 被纳入道琼斯指数，而 Meta 则拒绝了政府的 AI 审查。 这些进展凸显了重大的战略转变，AI 实验室正转向定制硬件以优化推理成本并减少对通用 GPU 的依赖，而巨额债务融资则表明 AI 基础设施的扩张正高度依赖资本市场。Meta 的监管立场也暴露了开源 AI 发展与国家安全之间日益加剧的结构性矛盾。 Jalapeño 芯片专为驱动 C...</p>
     </article>
     <article class="news-item">
-      <h3><a href="https://www.tmtpost.com/8035791.html" target="_blank">AI Agent 企业落地面临治理与工作流断层挑战</a></h3>
-      <p class="content">2026 年最新数据显示，尽管超 60%的企业计划部署 AI Agent，但真实落地率仅为 17%，标志着行业正从演示狂热转向实际交付检验。企业 AI 的下半场核心已从算力竞赛转变为工作流交付与人机协同闭环的打通。 这一转变表明，企业 AI 落地的真正瓶颈已不再是模型能力，而是治理缺位和工作流断层。成功整合“人在环路”（Human-in-the-loop）机制和稳健的 AI 护栏（Guardrails），将决定哪些企业能拿到下一代企业基建的入场券。 文章指出了 54 起 AI 失控事件，强调了在关键工具执行时引入可编程护栏（Guardrails）和...</p>
+      <h3><a href="https://www.tmtpost.com/8038972.html" target="_blank">AI 散热革命：下一代芯片从风冷向液冷的转变</a></h3>
+      <p class="content">本文提供了一项行业分析，强调了 AI 数据中心从传统风冷向先进液冷技术的关键转变。这一转变是由下一代 AI 芯片面临的物理散热极限所驱动的，而传统风冷已无法满足其散热需求。 克服散热瓶颈对于维持 AI 算力的指数级增长以及防止硬件降频或故障至关重要。这一转变将深刻影响数据中心的基础设施设计、能源效率以及未来 AI 系统的整体可扩展性。 该分析指出，虽然行业关注晶体管数量，但这些芯片的物理散热极限正成为主要瓶颈。液冷被视为散发高密度 AI 工作负载产生的大量热量所必需的技术突破。</p>
     </article>
     <article class="news-item">
-      <h3><a href="https://www.tmtpost.com/8035737.html" target="_blank">梁文锋 200 亿投资 AGI 的霸王条款</a></h3>
-      <p class="content">DeepSeek 创始人梁文锋将 200 亿元人民币的个人财富投入 AI 研发，并立下严格条款以保持对技术的绝对控制，全力冲击 AGI。 这种巨额自筹资金和不妥协的战略理念，凸显了中国 AI 领域向长期、理想化的 AGI 研究转变的趋势，使其免受短期市场压力的影响。 本文是一篇带有炒作性质的商业评论而非技术深度分析，重点强调了他利用量化交易利润为 AI 提供资金，并拒绝向外部投资者让渡技术控制权。</p>
+      <h3><a href="https://techcrunch.com/2026/06/24/figma-adds-code-layers-support-for-animations-more-ai-features-in-new-update/" target="_blank">Figma 推出代码层、动画及 AI 插件功能</a></h3>
+      <p class="content">Figma 发布了一次重大更新，引入了全新的代码层、对动效和着色器的原生支持，以及用于创建自定义插件的 AI 驱动功能。 此次更新通过允许设计师在设计文件中直接嵌入代码和高级视觉效果，显著弥合了设计与前端开发之间的鸿沟。它还赋能用户使用 AI 自动化工作流程并构建自定义工具，而无需深厚的编程专业知识。 新的代码层允许开发者和设计师将自定义代码直接集成到设计画布中。此外，Figma 现在提供了一个内置的即用型着色器填充和效果库，以增强视觉保真度。</p>
     </article>
     <article class="news-item">
-      <h3><a href="https://www.tmtpost.com/8035871.html" target="_blank">Flourish 类脑算法破解 AI 能耗</a></h3>
-      <p class="content">初创公司 Flourish 正试图通过开发模仿自然神经演化的类脑神经形态算法，来克服 AI 行业严重的能耗瓶颈。这一雄心勃勃的尝试挑战了现有的半导体工程极限以及当前 AI 行业根深蒂固的技术生态。 如果取得成功，类脑算法可以大幅降低与大型 AI 数据中心相关的巨大能源成本，使 AI 应用能够扩展到自主无人机等边缘设备。这一转变对于 AI 生态系统的可持续增长至关重要，并可能为更高效、复杂的推理以及通用人工智能开辟新路径。 这项尝试被描述为一场高风险的豪赌，因为它需要克服神经科学领域的重大未知数，突破半导体工程的物理极限，并与当前 AI 模型中高度优...</p>
+      <h3><a href="https://www.wired.com/story/ai-arms-race-china-us-cooperation/" target="_blank">中美 AI 专家对不断升级的 AI 军备竞赛表达共同担忧</a></h3>
+      <p class="content">《连线》杂志近期的一篇文章指出，中美两国顶尖的人工智能研究人员对不断升级的 AI 军备竞赛感到日益担忧。这些专家警告称，AI 技术的快速且缺乏协调的发展可能会导致灾难性的“切尔诺贝利时刻”。 这种共同的担忧表明，AI 安全和生存风险超越了地缘政治的界限，凸显了国际合作的迫切需求。如果不加以控制，争夺 AI 霸权的竞争性冲刺可能会破坏全球安全标准，并引发严重的技术或社会动荡。 这篇文章基于与两国顶尖 AI 专家的深入交流，阐明了他们对不受限制的 AI 发展的共同恐惧。“切尔诺贝利时刻”的比喻具体指的是，由于仓促部署和缺乏足够的安全协议，先进 AI 系...</p>
     </article>
     <article class="news-item">
-      <h3><a href="https://techcrunch.com/2026/06/21/when-the-trump-administration-cracks-down-on-anthropic-who-benefits/" target="_blank">特朗普政府对 Anthropic 的监管打压分析</a></h3>
-      <p class="content">TechCrunch Equity 播客的最新一期分析了特朗普政府对 Anthropic 的监管打压，并探讨了其对更广泛的人工智能生态系统可能产生的影响。 政府对 Anthropic 等领先人工智能公司的监管可能会显著改变市场动态，可能使竞争对手受益，或改变人工智能创新与安全标准的发展步伐。 该讨论基于简短的播客总结，而非深入的技术或政策分析，主要关注政府采取这些行动背后的动机及其对生态系统造成的影响。</p>
+      <h3><a href="https://venturebeat.com/data/mistral-launches-ocr-4-turning-document-extraction-into-a-full-enterprise-ai-play" target="_blank">Mistral 发布 OCR 4 赋能企业结构化文档智能</a></h3>
+      <p class="content">Mistral AI 发布了 OCR 4，这是一款高级文档智能模型，能够提取文档的结构化表示，包括边界框、块类型分类和逐词置信度分数。它支持 170 种语言，并可通过单个容器在本地部署，专为受监管企业设计。 通过提供边界框和块分类等原生结构元数据，OCR 4 解决了企业构建 RAG 管道和合规工作流时面临的关键溯源和路由瓶颈。其本地部署能力也直接满足了无法使用美国管辖云 API 的受监管行业的数据主权和隐私需求。 该模型可通过 Mistral API、Amazon SageMaker 和 Microsoft Foundry 使用，定价为每 1000...</p>
     </article>
     <article class="news-item">
-      <h3><a href="https://hardware.slashdot.org/story/26/06/21/2324220/the-secret-revolution-in-battery-technology-3-d-printing?utm_source=rss1.0mainlinkanon&utm_medium=feed" target="_blank">3D 打印技术引发电池设计的秘密革命</a></h3>
-      <p class="content">3D 打印技术正被用于制造可定制形状的电池，使其能直接集成到无人机和智能眼镜等设备的结构部件中。Sakuu 等公司还利用该技术无需溶剂即可打印组件，从而消除了传统电池制造中高耗能的干燥烤箱环节。 这种方法克服了传统电池刚性形状的限制，有望实现更长续航的军用无人机、更轻薄的消费级可穿戴设备以及纳米机器人。此外，通过简化制造流程和降低能耗，它还能大幅降低下一代电池的生产成本。 3D 打印方法兼容多种电池化学体系，包括现有的锂离子电池、新兴的钠离子电池以及固态电池技术。Sakuu 的具体创新在于用增材制造替代基于溶剂的制造步骤以降低成本和能耗，目前他们正...</p>
+      <h3><a href="https://venturebeat.com/technology/alibabas-model-never-trained-as-an-agent-and-improved-agent-performance-across-seven-benchmarks" target="_blank">阿里巴巴发布 Qwen-AgentWorld，通过环境预测训练智能体</a></h3>
+      <p class="content">阿里巴巴 Qwen 团队发布了 Qwen-AgentWorld，这是一种新型语言世界模型，它训练 AI 智能体在七个不同领域中预测环境响应，而不是直接执行动作。该方法使用超过 1000 万条真实交互轨迹来模拟环境状态，然后再对智能体进行实际任务的微调。 这种范式转变解决了智能体训练中一个关键的可扩展性瓶颈，它允许开发者系统地模拟在真实生产环境中难以复现的罕见边缘情况。通过将世界模型训练作为预热步骤，它显著提升了智能体在多个基准测试中的性能，为构建更强大的自主系统铺平了道路。 发布的模型采用了混合专家（Mixture-of-Experts）架构，其中...</p>
+    </article>
+    <article class="news-item">
+      <h3><a href="https://www.zdnet.com/article/secure-boot-certificate-updates-2026/" target="_blank">Windows 安全启动证书过期需立即更新系统</a></h3>
+      <p class="content">随着 2011 年的原始密钥即将过期，微软正在轮换其安全启动（Secure Boot）证书，要求用户安装新的 UEFI CA 2023 证书。此次更新影响超过 10 亿台 Windows PC 和部分 Linux 发行版，以防止未来出现启动失败的问题。 如果在过期前未能应用这些证书更新，可能会导致系统无法启动或无法安装新操作系统，从而引发大规模的运行中断。这凸显了在全球 PC 生态系统中进行主动系统管理和固件维护的关键需求。 此次过渡涉及从 2011 年的安全启动证书迁移到新发布的 2023 年 UEFI CA 证书。系统管理员和用户必须确保其 U...</p>
+    </article>
+    <article class="news-item">
+      <h3><a href="https://www.ithome.com/0/968/246.htm" target="_blank">美光与高通业绩超预期，AI 芯片板块单日暴涨 4000 亿美元</a></h3>
+      <p class="content">美光和高通发布了超预期的业绩展望及 AI 战略转型计划，推动 AI 芯片板块市值单日暴涨超 4000 亿美元。美光盘后股价大涨 12%，高通则宣布计划转型主攻 AI 赛道，预计 2029 年数据中心业务营收将达 150 亿美元。 此次股市的大幅反弹缓解了华尔街对 AI 基础设施巨额投资估值过高及回报周期过长的担忧。这验证了 AI 相关硬件（尤其是存储和数据中心组件）持续且强劲的市场需求。 积极的市场情绪带动了整个半导体供应链，西部数据和希捷等竞争对手股价涨超 8%，ASML 和应用材料等设备制造商涨超 4%。费城半导体指数年内累计涨幅达 90%，其...</p>
+    </article>
+    <article class="news-item">
+      <h3><a href="https://www.ithome.com/0/968/233.htm" target="_blank">英伟达黄仁勋：智能体与物理 AI 将驱动下一轮增长</a></h3>
+      <p class="content">在 6 月 24 日举行的年度股东大会上，英伟达 CEO 黄仁勋宣布智能体 AI 和物理 AI 将驱动公司的下一轮增长。他还强调了 AI 数据中心作为“AI 工厂”的核心地位，并指出 AI 投资已有明确回报，过去一年公司营收增长了 65%。 这一战略展望标志着行业正从纯软件生成式 AI 向物理和自主系统转变，为机器人和自动化基础设施的未来投资指明了方向。同时，这也强调了在可扩展的 AI 部署中，必须采用全面的企业级 AI 数据中心，而非拼凑的碎片化硬件。 黄仁勋强调，先进的 AI 数据中心需要由可信硬件、软件和网络组成的集成系统，并警告称拼凑走私组...</p>
+    </article>
+    <article class="news-item">
+      <h3><a href="https://www.ithome.com/0/968/224.htm" target="_blank">谷歌两名 Gemini 核心研究员跳槽至 Anthropic</a></h3>
+      <p class="content">谷歌 Gemini 大模型研发的核心骨干 Jonas Adler 和 Alexander Pritzel 即将离职并加入 Anthropic。此前，知名 AI 研究员 Noam Shazeer 和诺贝尔奖得主 John Jumper 也分别跳槽至 OpenAI 和 Anthropic。 这一持续的人才流失凸显了 AI 行业竞争格局的重大转变，顶尖研究人员正加速向 OpenAI 和 Anthropic 等竞争对手集中。这一趋势主要受这些公司筹备上市所驱动，使其能够通过丰厚的股权期权来吸引精英人才。 Noam Shazeer 曾离开谷歌创办 Chara...</p>
+    </article>
+    <article class="news-item">
+      <h3><a href="https://www.ithome.com/0/968/223.htm" target="_blank">数据挑战 AI 取代论：工程师岗位最抗风险</a></h3>
+      <p class="content">SignalFire 最新的人才报告显示，工程类岗位在科技行业各职能中招聘降幅最小，头部科技巨头 2025 年新员工中工程师占比升至 55%。这一数据直接反驳了企业界普遍宣称的 AI 正在取代软件工程师的说法。 这一转变表明 AI 工具目前是在增强而非取代工程人才，从而提高了生产力并增加了对软件工程师的需求。它为在 AI 自动化和失业焦虑中摸索的科技从业者和政策制定者提供了关键的经验证据。 尽管大型科技公司的整体招聘量较 2019 年下降了 25%，但工程岗位招聘仅下降 11%，且早期初创企业的工程师招聘量实际增长了 7%。该报告采用招聘数据而非裁...</p>
+    </article>
+    <article class="news-item">
+      <h3><a href="https://www.ithome.com/0/968/222.htm" target="_blank">谷歌推迟 Gemini 3.5 Pro 发布至 7 月以优化性能</a></h3>
+      <p class="content">谷歌将其 Gemini 3.5 Pro 模型的发布时间从 6 月推迟至 7 月，以收集更多用户反馈并优化性能。此次延期旨在根据早期测试结果，提升该模型在长文本任务、智能体操作和 token 效率方面的能力。 此次延期凸显了人工智能行业的激烈竞争，尤其是在 Anthropic 和 OpenAI 目前领先的代码生成领域。优化 token 效率和智能体能力对企业级应用至关重要，这些改进对谷歌保持竞争优势具有关键意义。 早期测试人员可以通过谷歌的 Antigravity 智能体开发平台和 LMArena 众包基准测试网站体验该模型。谷歌正在专门解决用户反映...</p>
+    </article>
+    <article class="news-item">
+      <h3><a href="https://www.ithome.com/0/968/193.htm" target="_blank">OpenAI 修复 Codex CLI 致 SSD 折寿缺陷</a></h3>
+      <p class="content">OpenAI 正在紧急修复其 Codex CLI 工具中的一个缺陷，该缺陷导致 SQLite 诊断日志过度写入，每年产生高达 640TB 的无用数据。该问题可追溯到 2026 年 2 月的一次日志级别更改，正在迅速消耗用户固态硬盘的写入寿命。 这个缺陷对使用 Codex CLI 的开发者构成了重大的财务和硬件风险，可能导致整个用户群体因 SSD 提前报废而损失数百万美元。这凸显了在本地运行且大量占用系统资源的 AI 开发工具中，进行严格的性能和硬件影响测试的必要性。 根本原因被确认为 SQLite 日志输出级别被设置为 TRACE 而非 ERROR...</p>
+    </article>
+    <article class="news-item">
+      <h3><a href="https://www.tmtpost.com/8038648.html" target="_blank">AI 使 PPT 制作商品化，代理公司核心价值转向战略判断</a></h3>
+      <p class="content">AI 工具正在迅速使演示文稿的制作商品化，将代理公司过去主要的计费服务变成了低成本商品。因此，客户发现，一旦制作幻灯片这一简单部分被自动化，他们自己也缺乏清晰的问题定义。 这一转变迫使咨询和代理公司从根本上重新定义其价值主张，从单纯的内容生产转向战略问题定义和组织对齐。它凸显了一个更广泛的趋势，即 AI 自动化了执行过程，使得人类判断力和战略远见成为知识工作中真正的高溢价技能。 核心洞察在于，问题定义和组织对齐过去一直被视为免费的售前工作，但现在必须成为主要的付费交付物。代理公司必须证明他们出售的是战略判断力，而不仅仅是格式化的幻灯片。</p>
+    </article>
+    <article class="news-item">
+      <h3><a href="https://www.tmtpost.com/8039484.html" target="_blank">字节跳动豆包 AI 推出付费服务</a></h3>
+      <p class="content">字节跳动为其豆包 AI 助手推出了付费服务，标志着从免费获客向商业变现的转变。此举表明整个行业正经历更广泛的转型，AI 助手开始向用户收费。 这一转变凸显了 AI 助手市场的成熟，企业现在正专注于可持续的商业变现，而不仅仅是用户增长。这也表明 AI 正日益融入并重组传统市场和工作流程。 提供的文章内容非常简短且偏向哲学思考，指出 AI 正在重新组织旧世界而非创造新世界，同时缺乏关于付费服务的具体技术细节或定价结构。</p>
+    </article>
+    <article class="news-item">
+      <h3><a href="https://techcrunch.com/2026/06/24/europe-is-pushing-back-on-washingtons-chip-war/" target="_blank">欧洲抵制美国对华禁售旧款 ASML 光刻机的施压</a></h3>
+      <p class="content">欧洲正积极抵制美国（特别是拟议的 MATCH 法案）限制中国获取 ASML 旧代深紫外（DUV）光刻设备的努力。ASML 首席执行官指出，这些是大约十年前首次发货的旧设备，而中国目前仍在购买。 这种地缘政治摩擦凸显了美欧在半导体出口管制上日益分歧，直接影响全球硬件供应链。限制旧款 DUV 设备将严重削弱中国生产用于汽车、消费电子和基础 AI 设施的成熟制程芯片的能力。 相关的美国立法努力是 MATCH 法案，旨在禁止出口这些旧款 DUV 设备。目前，虽然美国和荷兰已经限制了 ASML 最先进的极紫外（EUV）和部分新款 DUV 设备，但这些旧款遗留...</p>
+    </article>
+    <article class="news-item">
+      <h3><a href="https://techcrunch.com/2026/06/24/companies-are-scrambling-to-stop-employees-from-maxing-out-ai-budgets-with-small-tasks/" target="_blank">企业实施严格的 Token 配给以遏制 AI 预算浪费</a></h3>
+      <p class="content">企业正从无限制的 AI 使用转向严格的 Token 配给和使用控制，以防止员工在琐碎任务上耗尽公司预算。这标志着从短暂的“Token 挥霍”时代进入了严格的资源管理时代。 这一转变凸显了企业 AI 采用中面临的实际运营挑战和成本管理障碍，特别是 AI FinOps（AI 财务运营）的兴起。它表明，随着 LLM 部署规模的扩大，组织必须实施严格的治理，以防止低价值、高频查询导致成本失控。 核心问题围绕隐藏的 Token 税和低效的 Token 使用展开，员工可能会将昂贵的 LLM 用于本可由更便宜模型或传统软件处理的简单任务。有效的 LLMOps 现...</p>
+    </article>
+    <article class="news-item">
+      <h3><a href="https://www.wired.com/story/how-to-opt-out-of-google-search-new-ai-data-training/" target="_blank">如何关闭谷歌搜索 AI 数据训练</a></h3>
+      <p class="content">谷歌更新了其搜索历史记录设置，将存储用户上传的媒体（如以图搜图使用的图片）用于训练其 AI 模型。用户现在可以找到关于如何退出这一新数据收集功能的指南。 这一更新凸显了日常搜索活动与 AI 模型训练之间日益紧密的联系，引发了重大的隐私担忧。它赋予用户控制其数字足迹的权利，并让用户能够决定科技巨头如何使用其个人媒体数据。 该数据收集专门针对用户交互中的媒体上传（例如以图搜图），而不仅仅是文本查询。用户需要手动进入其谷歌搜索历史记录设置，以禁用这一特定的 AI 训练数据收集功能。</p>
+    </article>
+    <article class="news-item">
+      <h3><a href="https://www.wired.com/story/the-trump-white-house-is-over-anthropics-dario-amodei/" target="_blank">Anthropic CEO Dario Amodei 失宠于特朗普白宫</a></h3>
+      <p class="content">据报道，Anthropic 首席执行官兼联合创始人 Dario Amodei 正逐渐失去特朗普政府的青睐，并在与白宫的高级别会议中被另一位联合创始人 Tom Brown 取代。 这一转变表明领先的 AI 公司与美国政府之间的关系正在发生变化，可能会影响在最高层级讨论 AI 安全和监管政策的方式。这也凸显了主要 AI 实验室内部的技术领导力和政府关系策略正在快速演变。 此次人事变动涉及 Tom Brown 接管此前由 Amodei 负责的高级别白宫会议，据报道一位政府官员将即将离任的代表称为“怪人”。这表明 Anthropic 在如何与现任政府接触方...</p>
+    </article>
+    <article class="news-item">
+      <h3><a href="https://venturebeat.com/orchestration/how-shopify-built-an-ai-stack-that-doesnt-care-which-models-survive" target="_blank">Shopify 打造模型无关的自动故障转移 AI 栈</a></h3>
+      <p class="content">Shopify 实施了一个内部 LLM 代理来抽象 AI 模型提供商，当主模型不可用时，能够自动故障转移到 Claude Opus 或 GPT 5.5 等替代模型。此外，该公司利用自动化蒸馏管道来训练更小的专用学生模型，从而显著降低特定任务的成本和延迟。 这种架构展示了企业如何通过将工作流与特定模型提供商解耦，来应对快速变化的 AI 环境中的波动性。通过将提供商抽象与模型蒸馏相结合，公司可以在保持运营弹性的同时，针对各种 AI 应用优化成本、速度和准确性。 该代理处理批量代币购买，并提供一个使用仪表板来监控不同工程部门的代币消耗、推理时间和模型利用...</p>
     </article>
   </main>
 
