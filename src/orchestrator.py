@@ -4,6 +4,9 @@ import asyncio
 from collections import defaultdict
 from dataclasses import dataclass, field
 from datetime import datetime, timedelta, timezone
+
+# 北京时间 (UTC+8)
+CST = timezone(timedelta(hours=8))
 from typing import List, Dict, Optional
 from urllib.parse import urlparse
 import httpx
@@ -144,7 +147,7 @@ class HorizonOrchestrator:
             await self._enrich_important_items(important_items)
 
             # 7. Generate and save daily summaries for each configured language
-            today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+            today = datetime.now(CST).strftime("%Y-%m-%d")
             for lang in self.config.ai.languages:
                 summarizer = DailySummarizer()
                 summary = await summarizer.generate_summary(important_items, today, len(all_items), language=lang)
@@ -239,7 +242,7 @@ class HorizonOrchestrator:
             since = datetime.now(timezone.utc) - timedelta(hours=force_hours)
         else:
             hours = self.config.filtering.time_window_hours
-            since = datetime.now(timezone.utc) - timedelta(hours=hours)
+            since = datetime.now(CST) - timedelta(hours=hours)
         return since
 
     async def fetch_all_sources(self, since: datetime) -> List[ContentItem]:
