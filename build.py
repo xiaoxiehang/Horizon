@@ -39,11 +39,6 @@ def parse_markdown(md_file):
     for match in item_pattern.finditer(content):
         title, url, summary, background = match.groups()
         
-        # Skip if title is mostly English (no Chinese characters)
-        has_chinese = bool(re.search(r'[\u4e00-\u9fff]', title))
-        if not has_chinese:
-            continue
-        
         # Clean summary (first paragraph only, max 280 chars)
         summary_clean = summary.split('\n\n')[0].strip()
         if len(summary_clean) > 280:
